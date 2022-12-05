@@ -18,21 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Joaquín Ríos 
+title: WEB DOCENTE de Joaquín Ríos - IES Los Albares
 email: joaquin.rios2@murciaeduca.es
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Apuntes y material sobre marerias de 1º y 2º de los Ciclos
+  Formativos de Desarrollo de Apliaciones Web y Desarrollo de 
+  Aplicaciones Multiplataforma impartidos en el "IES Los Albares"
+  de Cieza (Murcia)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  joaquinalbares
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
+  - jekyll-assets
+  - jekyll-admin
+  - jekyll-include-cache 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
