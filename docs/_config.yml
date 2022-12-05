@@ -14,24 +14,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Blog Educativo de Joaquín Ríos
-email:
+email: joaquin.rios2@murciaeduca.es
 description: >- # this means to ignore newlines until "baseurl:"
   Aqui hay información interesante sobre las materias de los
   Ciclos Formativos de Grado Supuerior de Desarrollo de Aplicaciones
   Web y Multiplataforma 
-twitter_username: username
-github_username: username
+# twitter_username: username
+github_username: joaquinalbares
 minimal_mistakes_skin: default
 search: true
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "mint" 
+# "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: ES # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -58,9 +60,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Joaquín Ríos"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "El mapa no es el territorio. Vivo y aprendo cada día."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
