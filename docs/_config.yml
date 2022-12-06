@@ -13,12 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# Site Settings
+locale                   : "es-ES"
 title: Blog Educativo de Joaquín Ríos
 email: joaquin.rios2@murciaeduca.es
 description: >- # this means to ignore newlines until "baseurl:"
-  Aqui hay información interesante sobre las materias de los
-  Ciclos Formativos de Grado Supuerior de Desarrollo de Aplicaciones
-  Web y Multiplataforma 
+  Este blog nace como herramienta de apoyo a los Ciclos Formativos 
+  de Grado Superior de Desarrollo de Aplicaciones Web y 
+  Multiplataforma de IES Los Albares (Cieza) - MURCIA - SPAIN. 
 # twitter_username: username
 github_username: joaquinalbares
 minimal_mistakes_skin: default
@@ -27,8 +30,7 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "aqua" 
-# "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
+minimal_mistakes_skin: "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
