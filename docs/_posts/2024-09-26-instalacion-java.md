@@ -8,8 +8,6 @@ tags:
   - temurin
 ---
 
-# PASOS INICIALES: INSTALACIÓN DE JAVA
-
 En primer lugar, debemos de tener claro que para comenzar a desarrollar, debemos preparar un entorno adecuado que incluya todas las herramientas necesarias.
 
 En nuestro caso, asumimos que ya tenemos instalada la máquina virtual con la que vamos a trabajar.
@@ -30,9 +28,8 @@ Los pasos son los siguientes:
   apt update && apt upgrade
   ```
 
+1. Instalamos paquetes necesarios.
 
-1. Instalar paquetes necesarios.
-  
   Necesitamos instalar las herramientas necesarias para cada uno de los pasos, por lo que escribimos:
 
   ```
@@ -40,11 +37,13 @@ Los pasos son los siguientes:
   ```
 
 2.  Descargamos la clave gpg para verificar la integridad y el origen del paquete. 
+
   ```
   wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
   ```
  
-3. Añadimos el repositorio ofical de Eclipse Temurin
+3. Añadimos el repositorio ofical de Eclipse Temurin.
+
   ```
   echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list 
   ```
@@ -55,6 +54,7 @@ Los pasos son los siguientes:
   ```
   apt update
   ```
+
 5. Instalamos JAVA.
 
   ```
