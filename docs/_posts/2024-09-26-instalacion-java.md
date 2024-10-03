@@ -37,7 +37,7 @@ Los pasos son los siguientes:
   ```
   wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
   ```
- 
+
 3. Añadimos el repositorio ofical de Eclipse Temurin.
   ```
   echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list 
@@ -53,7 +53,7 @@ Los pasos son los siguientes:
   ```
   apt install temurin-21-jdk
   ```  
-  
+ 
 6. Comprobamos la instalación.
   ```
   java -version
