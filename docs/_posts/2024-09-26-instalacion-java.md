@@ -23,13 +23,11 @@ Hemos seguido paso a paso el [tutorial oficial](https://adoptium.net/es/installa
 Los pasos son los siguientes:
 
 0. Actualizar el sistema
-
   ```
   apt update && apt upgrade
   ```
 
 1. Instalamos paquetes necesarios.
-
   Necesitamos instalar las herramientas necesarias para cada uno de los pasos, por lo que escribimos:
 
   ```
@@ -37,20 +35,17 @@ Los pasos son los siguientes:
   ```
 
 2.  Descargamos la clave gpg para verificar la integridad y el origen del paquete. 
-
   ```
   wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
   ```
  
 3. Añadimos el repositorio ofical de Eclipse Temurin.
-
   ```
   echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list 
   ```
   > AL SER UNA VERSION BASADA EN UBUNTU, HEMOS HECHO LA MODIFICACIÓN SUGERIDA EN EL REPOSITORIO.
 
 4. Actualizamos el sistema de nuevo para que cargue los nuevos repositorios
-
   ```
   apt update
   ```
