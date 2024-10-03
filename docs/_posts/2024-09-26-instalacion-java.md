@@ -18,13 +18,13 @@ Hemos elegido [JAVA Temurin](https://adoptium.net/es/temurin/releases/) como pla
 
 Hemos seguido paso a paso el [tutorial oficial](https://adoptium.net/es/installation/linux/), que funciona correctamente.
 
-> IMPORTANTE: En este caso, es recomendable ejecutar todos los comandos con privilegios de administrador, por lo que debemos escrbir ```sudo su```.
+> IMPORTANTE: En este caso, es recomendable ejecutar todos los comandos con privilegios de administrador, por lo que debemos escrbir ```sudo su``` y ejecutar el resto de comandos como administrador.
 
 Los pasos son los siguientes:
 
-0. Actualizar el sistema
+0. Actualizamos el sistema.
   ```
-  apt update && apt upgrade
+  apt update && apt upgrade -y
   ```
 
 1. Instalamos paquetes necesarios.
@@ -42,7 +42,7 @@ Los pasos son los siguientes:
   ```
   echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list 
   ```
-  > AL SER UNA VERSION BASADA EN UBUNTU, HEMOS HECHO LA MODIFICACIÓN SUGERIDA EN EL REPOSITORIO.
+  > AL SER UNA VERSION BASADA EN UBUNTU, HEMOS HECHO LA MODIFICACIÓN SUGERIDA EN LA WEB.
 
 4. Actualizamos el sistema de nuevo para que cargue los nuevos repositorios
   ```
