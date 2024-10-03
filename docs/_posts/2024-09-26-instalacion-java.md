@@ -29,7 +29,6 @@ Los pasos son los siguientes:
 
 1. Instalamos paquetes necesarios.
   Necesitamos instalar las herramientas necesarias para cada uno de los pasos, por lo que escribimos:
-
   ```
   apt-get install -y wget apt-transport-https gnupg
   ```
@@ -51,13 +50,11 @@ Los pasos son los siguientes:
   ```
 
 5. Instalamos JAVA.
-
   ```
   apt install temurin-21-jdk
   ```  
   
 6. Comprobamos la instalación.
-
   ```
   java -version
   ```    
