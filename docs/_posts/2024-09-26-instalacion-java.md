@@ -1,6 +1,6 @@
 ---
 title: "PASOS INICIALES: INSTALACIÓN DE JAVA"
-date: 2024-10-03T15:34:30-04:00
+date: 2024-09-26T15:34:30-04:00
 categories:
   - clases
 tags:
