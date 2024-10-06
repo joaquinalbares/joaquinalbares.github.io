@@ -41,5 +41,5 @@ Los pasos son los siguientes:
   sudo apt install code
   ```  
  
-Una vez instalado Visual Studio Code, lo ejecutamos una primera vez para terminar de configurar algunos aspesctos (tema, idioma, ...) y pasamos a instalar el [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) desde el [marketplace](https://marketplace.visualstudio.com/), el lugar donde podemos encontrar multitud de aplicaciones para Visual Studio Code.
+Una vez instalado Visual Studio Code, lo ejecutamos una primera vez para terminar de configurar algunos aspesctos (tema, idioma, ...) y pasamos a instalar el [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) desde el [marketplace](https://marketplace.visualstudio.com/), el lugar donde podemos encontrar multitud de plugins para Visual Studio Code.
 
