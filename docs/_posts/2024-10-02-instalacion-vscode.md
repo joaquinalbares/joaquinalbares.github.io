@@ -2,7 +2,7 @@
 title: "PASOS INICIALES: INSTALACIÓN DE VISUAL STUDIO CODE"
 date: 2024-10-02T15:34:30-04:00
 categories:
-  - clases
+  - UT02
 tags:
   - java
   - Visual Studio Code
