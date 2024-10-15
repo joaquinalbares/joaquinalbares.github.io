@@ -9,7 +9,8 @@ tags:
 ---
 
 ## RUBY
-El siguiente texto es un extracto en inglés de la [web oficial](https://gorails.com/setup/ubuntu/24.04)cpara la instalación de Ruby on rails.
+
+> El siguiente texto es un extracto en inglés de la [web oficial](https://gorails.com/setup/ubuntu/24.04) de Ruby on rails.
 
 En este caso vamos a instalar sólamente Ruby.
 
@@ -84,7 +85,7 @@ npm install -g yarn
 
 ## C++
 
->> Extraido de un buscador usando IA.
+> Extraido de un buscador usando IA.
 
 ### C++ Installation on Ubuntu 24.04
 To develop C++ applications on Ubuntu 24.04, you’ll need to install the GNU Compiler Collection (GCC) and C++ compiler. Here’s a step-by-step guide:
