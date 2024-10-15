@@ -64,32 +64,28 @@ plugins:
 author:
   name   : "Joaquín Ríos"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "El mapa no es el territorio. Vivo y aprendo cada día."
+  bio    : "Profesor del IES Los Albares de Cieza (Murcia). El mapa no es el territorio."
   links:
-    - label: "Website"
+    - label: "Entornos de desarrollo"
       icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://joaquinalbares.github.io/entornos_de_desarrollo"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/joaquinalbares"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
-
+    - label: "Web de IES Los Albares"
+      icon: "fab fa-solid fa-school"
+      url: "https://www.ieslosalbares.es"
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Entornos de desarrollo"
+      icon: "fas fa-fw fa-link"
+      url: "https://joaquinalbares.github.io/entornos_de_desarrollo"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/joaquinalbares"
+    - label: "Web de IES Los Albares"
+      icon: "fab fa-solid fa-school"
+      url: "https://www.ieslosalbares.es"
 
 defaults:
   # _posts
@@ -101,7 +97,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
   # _pages
   - scope:

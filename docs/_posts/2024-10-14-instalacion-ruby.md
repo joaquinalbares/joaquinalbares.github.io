@@ -1,5 +1,5 @@
 ---
-title: "INSTALACIÓN DE RUBY EN UBUNTU"
+title: "INSTALACIÓN DE RUBY/C++ EN UBUNTU 24.04"
 date: 2024-10-14T09:34:30-04:00
 categories:
   - UT02
@@ -8,17 +8,19 @@ tags:
   - ubuntu
 ---
 
-El siguiente texto es un extracto en inglés de la [web oficial](https://gorails.com/setup/ubuntu/24.04)para la instalación de Ruby o rails.
+## RUBY
+El siguiente texto es un extracto en inglés de la [web oficial](https://gorails.com/setup/ubuntu/24.04)cpara la instalación de Ruby on rails.
 
 En este caso vamos a instalar sólamente Ruby.
 
-## Installing Ruby
+### Installing Ruby
 
 The first step is to install dependencies for compiling Ruby. Open your Terminal and run the following commands to install them.
 
 ```
 sudo apt-get update
-sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev
+libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
 ```
 
 Next we're going to be installing Ruby using a version manager called [ASDF](https://asdf-vm.com).
@@ -79,3 +81,71 @@ node -v
 # Install yarn for Rails jsbundling/cssbundling or webpacker
 npm install -g yarn
 ```
+
+## C++
+
+>> Extraido de un buscador usando IA.
+
+### C++ Installation on Ubuntu 24.04
+To develop C++ applications on Ubuntu 24.04, you’ll need to install the GNU Compiler Collection (GCC) and C++ compiler. Here’s a step-by-step guide:
+
+Update the package list: Run the following command to ensure your package list is up-to-date:
+
+```
+sudo apt update
+```
+
+Install build-essential package: This package contains essential tools for building and compiling software, including GCC and C++ compiler:
+
+```
+sudo apt install build-essential
+```
+
+Verify GCC installation: Check the GCC version using:
+
+```
+gcc --version
+```
+
+This should output the version of GCC installed on your system.
+
+**Compiling a C++ Program**
+
+To compile a C++ program, follow these steps:
+
+1. Create a new file: Use your preferred text editor (e.g., nano) to create a new file with a .cpp extension (e.g., helloWorld.cpp).
+Write your C++ code: Write your C++ program in the file.
+2. Compile the program: Use the following command to compile your C++ program:
+  ```g++ helloWorld.cpp -o helloWorld```
+  This will generate an executable file named helloWorld.
+
+**Additional Tips**
+
+You can also use the gcc command instead of g++ for C++ compilation. However, g++ is specifically designed for C++ and provides additional features and optimizations.
+
+If you’re using Visual Studio Code (VS Code) as your IDE, you’ll need to configure it to use the GCC C++ compiler and GDB debugger. You can do this by creating a .vscode/c_cpp_properties.json file with the following content:
+
+```
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "clang-x64"
+    }
+  ],
+  "version": 4
+}
+```
+
+This configuration tells VS Code to use GCC as the C++ compiler and GDB as the debugger.
+
+**Resources**
+
+- Ubuntu documentation: https://ubuntu.com/
+- GCC documentation: https://gcc.gnu.org/
+- VS Code documentation: https://code.visualstudio.com/
