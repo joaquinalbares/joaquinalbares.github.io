@@ -102,7 +102,9 @@ Install build-essential package: This package contains essential tools for build
 sudo apt install build-essential
 ```
 
-Verify GCC installation: Check the GCC version using:
+**Verify GCC installation**
+
+Check the GCC version using:
 
 ```
 gcc --version
