@@ -1,6 +1,6 @@
 ---
 title: "CONFIGURACIÓN INICIAL GIT"
-date: 2024-11-06T09:34:30-04:00
+date: 2024-11-06T00:01:30-01:00
 categories:
   - UT05
 tags:
