@@ -87,3 +87,35 @@ Los alias te permiten usar atajos para comandos de Git que usas frecuentemente. 
   ```
 
 Usa estos alias escribiendo `git st`, `git lg`, y `git co` respectivamente.
+
+### **5. Configurar Línea de Comandos en Color**
+
+Para facilitar la lectura de los mensajes en la terminal, puedes habilitar el color en la salida de Git:
+
+```bash
+git config --global color.ui auto
+```
+
+---
+
+### **6. Verificar la Configuración**
+
+Puedes ver todas las configuraciones que has hecho con el siguiente comando:
+
+```bash
+git config --list
+```
+
+Esto mostrará todos los parámetros configurados globalmente en Git.
+
+---
+
+### **Resumen de Comandos Usados**
+
+- `git config --global user.name "Tu Nombre"`
+- `git config --global user.email "tu.email@example.com"`
+- `git config --global core.editor "nombre_del_editor"`
+- `git config --global alias.[alias] [comando]`
+- `git config --global credential.helper cache`
+- `git config --global color.ui auto`
+- `git config --list`
