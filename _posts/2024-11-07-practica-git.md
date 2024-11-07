@@ -1,5 +1,5 @@
 ---
-title: "CONFIGURACIÓN INICIAL GIT"
+title: "PRÁCTICA INICIAL DE GIT"
 date: 2024-11-07T00:01:30-01:00
 categories:
   - UT05
@@ -16,7 +16,7 @@ tags:
    **Comandos: `git init`, `git status`**
 
 - **Paso 1**: 
-Crea una carpeta de llamada UT05_P01 y abre la terminal en esa ubicación.
+Crea una carpeta llamada UT05_P01 y abre la terminal en esa ubicación.
 
 - **Paso 2**: 
 Inicializa el repositorio en esa carpeta:
