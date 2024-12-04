@@ -12,6 +12,23 @@ tags:
 
 ---
 
+### **0. ¿Cómo funciona git?**
+
+Antes de continuar, vamos a detenernos un momento para entender el funcionamiento de git.
+
+Cuando trabajas con git, lo haces, evidentemente, en un directorio donde tienes tus archivos, los modificas, los borras, creas nuevos, etc.
+
+Ese directorio es lo que llamamos "Directorio de trabajo", puede contener otros directorios y, de hecho es el que contiene el directorio .git del que hablábamos al principio.
+
+Git sabe que tiene que controlar ese directorio, pero no lo hace hasta que se lo digas expresamente.
+
+Más adelante veremos con algo más de detalle la orden `git add`, que sirve para preparar los archivos que le indiques poniéndolos en una especie de lista virtual a la que llamamos el "Index". En Index ponemos los archivos que hemos ido modificando, pero las cosas que están en el "Index" aun no han sido archivadas por git.
+
+Ojo, que algo esté en el index no significa que se borre de tu directorio de trabajo ni nada parecido, el Index es solo una lista de cosas que tendrás que actualizar en el repositorio porque han cambiado.
+
+Por último, la instrucción `git commit`, que también veremos en breve, es la que realmente envía las cosas que hay en el Index al repositorio. Solo que en lugar de "repositorio" lo vamos a llamar "HEAD", porque el lugar exacto al que va puede significar cosas distintas en según que casos, como ya veremos cuando hablemos de ramas y esas cosas.
+
+
 ### **1. Verificar la Instalación de Git**
 
 Antes de comenzar, asegúrate de que Git esté instalado correctamente:
