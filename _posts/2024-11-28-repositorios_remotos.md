@@ -28,7 +28,7 @@ git clone https://github.com/joaquinalbares/UT05_P01.git
 El resultado debe ser el siguiente:
 
 ```bash
-Cloning into 'UT05_P01'...
+Cloning into 'UT05_P02'...
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
@@ -41,11 +41,10 @@ Al contrario que con `git init`, con `git clone` no es necesario crear un direct
 
 Clonar un repositorio significa copiarlo completamente. No solo los archivos, sino todo su historial, cambios realizados, etc. Es decir que en tu repositorio local tendrás exactamente lo mismo que había en el repositorio remoto de donde lo has clonado.
 
-Si has clonado el repositorio del ejemplo anterior (y si no, hazlo ahora), podemos ver un par de cosas interesantes. ¿Recuerdas las orden `git config --list`? Entra en el directorio del repositorio (para ello tendrás que hacer algo como `cd UT05_P01/`) y lista las opciones de configuración.
-
-Verás, entre otras muchas, las user.name y user.email que ya conoces. Pero hay otra que es importante, y es `remote.origin.url`, que debe contener la dirección original del repositorio del que has clonado el tuyo.
-
-Ahora mismo no nos sirve de mucho pero, cuando más adelante trabajemos en red con otros repositorios, nos va a venir bien recordarlo.
+Ahora vamos a entrar en la carpeta del repositorio importado:
+```bash
+cd UT05_P01
+```
 
 > *IMPORTANTE*  
 > En adelante, a menos que se diga lo contrario, todos los comandos y órdenes que se indique se deberán ejecutar en el directorio de nuestro proyecto (o uno de sus subdirectorios, lógicamente). Git reconoce el proyecto con el que está trabajando en función del lugar donde te encuentres al ejecutar los comandos.
@@ -62,7 +61,7 @@ Para sincronizar con uno o más repositorios remotos, debemos saber qué reposit
 ```
 git remote
 ```
-Y, seguramente, te retornará algo parecido a `origin`, lo que nos dice que el repositorio es el que le indicamos como "origen" al hacer el `clone` y, la verdad, no es mucha información.
+Y, seguramente, te devolverá algo parecido a `origin`, lo que nos dice que el repositorio es el que le indicamos como "origen" al hacer el `clone` y, la verdad, no es mucha información.
 
 Para obtener algo más útil, prueba a hacerlo con el parámetro `-v` de este modo:
 
@@ -91,8 +90,7 @@ DIRECCION_DEL_REPOSITORIO la dirección donde se encuentra. Por
 ejemplo:
 
 ```
-git remote add personal \
-    git://github.com/psicobyte/repo-ejemplo.git
+git remote add personal \ git://github.com/psicobyte/repo-ejemplo.git
 ```
 
 Esto añade un repositorio remoto llamado `personal` con la dirección que se indica.
@@ -102,8 +100,8 @@ Si ahora hacemos un `git remote -v`, veremos algo como:
 ```
 personal	git://github.com/psicobyte/repo-ejemplo.git (fetch)
 personal	git://github.com/psicobyte/repo-ejemplo.git (push)
-origin	https://github.com/oslugr/repo-ejemplo.git (fetch)
-origin	https://github.com/oslugr/repo-ejemplo.git (push)
+origin	https://github.com/joaquinalbares/UT05_P01.git (fetch)
+origin	https://github.com/joaquinalbares/UT05_P01.git (push)
 ```
 
 Para eliminar un repositorio tienes:
@@ -220,23 +218,3 @@ passwords.*
 
 El archivo *.gitignore* permite hacer cosas mucho más complejas, aunque para la mayoría de los casos con algo como lo visto arriba es suficiente.
 
-Pese a que cada repositorio puede tener su propio *.gitignore*, puede ser útil tener además un archivo general para todos los repositorios.
-
-Git busca por defecto este archivo general en el directorio "*.config/git/ignore*" de tu directorio "Home", pero esto puede cambiarse con la siguiente orden:
-
-```
-git config --global core.excludesfile RUTA_AL_ARCHVO_IGNORE
-```
-
-Por ejemplo, para usar un archivo llamado "ignorar" en mi directorio personal, pondría algo así:
-
-```
-git config --global core.excludesfile ~/ignorar
-```
-
-> El símbolo "~" en un *path* o camino significa "El directorio Home del usuario".
-
-Puedes encontrar muchos ejemplos de archivos *.gitignore* en
-este [repositorio de GitHub](https://github.com/github/gitignore).
-
->Las opciones que se establecen con `git config`  para el repositorio local se almacenan permanentemente en el fichero `.git/config`. Por lo pronto no nos preocupemos de este fichero, pero todas las variables anteriores (y alguna más) se pueden poner directamente en este fichero.
