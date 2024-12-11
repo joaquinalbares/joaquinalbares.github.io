@@ -13,22 +13,20 @@ tags:
 
 ### Clonando un repositorio
 
-Un repositorio también puede iniciarse copiando (*clonando*) otro ya existente.
+Un repositorio puede iniciarse copiando (*clonando*) otro ya existente. En nuestro caso, vamos a clonar un repositorio ya creado en nuestro GitHub y que llamaremos **UT05-P03**.
 
-```
-git clone REPOSITORIO
-```
+> **Para evitar que nos pida credenciales, vamos a clonarlo usando el protocolo *SSH* que ya configuramos en una práctica anterior.**
 
-por ejemplo:
-
-```
-git clone git@github.com:tu_usuario/UT05_P01.git
-```
-
-El resultado debe ser el siguiente:
+La orden para clonar un repositorio remot es ```bash git clone REPOSITORIO```, donde el repositorio es la ruta remota, que dependerá del protocolo usado. En nuestro caso, quedaría algo parecido a esto:
 
 ```bash
-Cloning into 'UT05_P02'...
+git clone git@github.com:tu_usuario/UT05-P03.git
+```
+
+Al pulsar intro el resultado mostrado debe ser el siguiente:
+
+```bash
+Cloning into 'UT05-P03'...
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
@@ -43,7 +41,7 @@ Clonar un repositorio significa copiarlo completamente. No solo los archivos, si
 
 Ahora vamos a entrar en la carpeta del repositorio importado:
 ```bash
-cd UT05_P01
+cd UT05-P03
 ```
 
 > *IMPORTANTE*  
@@ -72,8 +70,8 @@ git remote -v
 lo que te devolverá algo parecido a esto:
 
 ```
-origin	https://github.com/joaquinalbares/UT05_P01.git (fetch)
-origin	https://github.com/joaquinalbares/UT05_P01.git (push)
+origin	https://github.com/tu_usuario/UT05-P03.git (fetch)
+origin	https://github.com/tu_usuario/UT05-P03.git (push)
 ```
 
 Esto te dice que hay un repositorio llamado "origin" que se usará tanto para recibir (fetch) como para enviar (push) los cambios. "origin" es el nombre del repositorio remoto por defecto, pero puedes tener muchos más y sincronizar con todos ellos.
@@ -98,10 +96,10 @@ Esto añade un repositorio remoto llamado `personal` con la dirección que se in
 Si ahora hacemos un `git remote -v`, veremos algo como:
 
 ```
-personal	git://github.com/psicobyte/repo-ejemplo.git (fetch)
-personal	git://github.com/psicobyte/repo-ejemplo.git (push)
-origin	https://github.com/joaquinalbares/UT05_P01.git (fetch)
-origin	https://github.com/joaquinalbares/UT05_P01.git (push)
+personal	git://github.com/tu_usuario/UT05-P03.git (fetch)
+personal	git://github.com/tu_usuario/UT05-P03.git (push)
+origin	https://github.com/joaquinalbares/UT05-P03.git (fetch)
+origin	https://github.com/joaquinalbares/UT05-P03.git (push)
 ```
 
 Para eliminar un repositorio tienes:
