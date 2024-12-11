@@ -22,7 +22,7 @@ git clone REPOSITORIO
 por ejemplo:
 
 ```
-git clone https://github.com/joaquinalbares/UT05_P01.git
+git clone git@github.com:tu_usuario/UT05_P01.git
 ```
 
 El resultado debe ser el siguiente:
