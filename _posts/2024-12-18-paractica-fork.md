@@ -21,7 +21,7 @@ tags:
 1. Cada uno de vosotros debe realizar un **fork** del repositorio principal en su cuenta de GitHub. Esto generará una nueva URL que será la que useis para vuestro trabajo. La llamaremos URL_DEL_FORK.
 
 Se hace pulsando el botón fork que está en la parte superior derecha del repositorio:
-![botón FORK](../assets/images/2024-12-18-01.jpg)
+![botón FORK](/assets/images/2024-12-18-01.jpg)
 
 #### Paso 2: Clonar el repositorio forkeado
 1. Cada uno de vosotros debe clonar su repositorio forkeado a su ordenador local usando:
