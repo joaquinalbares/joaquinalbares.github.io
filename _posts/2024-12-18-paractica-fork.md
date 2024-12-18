@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICA DE FORK Y PULLREQUEST BÁISCA"
+title: "PRÁCTICA DE FORK Y PULL REQUEST BÁISCA"
 date: 2024-12-18T00:01:30-01:00
 categories:
   - UT05
@@ -12,7 +12,7 @@ tags:
 
 [https://github.com/joaquinalbares/Colaborativo-2425](https://github.com/joaquinalbares/Colaborativo-2425)
 
-- Se deben modificar los contenidos del "README.md" para que incluya el conmbre completo y el NRE de cada alumno.
+- Se deben modificar los contenidos del "README.md" para que incluya el nombre completo y el NRE de cada alumno.
 
 
 ### Desarrollo de la práctica
@@ -52,7 +52,7 @@ tags:
 2. Hay que **escribir una descripción clara** de los cambios realizados.
 
 #### Paso 7: Aprobar una pull request
-El profesor aprobará la **pull reqeuest** y dará por finalizada la práctica.
+El profesor aprobará la **pull request** y dará por finalizada la práctica.
 
 ---
 
