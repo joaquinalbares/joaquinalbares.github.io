@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICA DE FORK Y PULL REQUEST BÁISCA"
+title: "PRÁCTICA DE FORK Y PULL REQUEST"
 date: 2024-12-18T00:01:30-01:00
 categories:
   - UT05
