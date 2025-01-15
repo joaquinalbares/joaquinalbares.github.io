@@ -12,8 +12,6 @@ tags:
 
 [https://github.com/joaquinalbares/Colaborativo-2425](https://github.com/joaquinalbares/Colaborativo-2425)
 
-- Se deben modificar los contenidos del "README.md" para que incluya el nombre completo y el NRE de cada alumno.
-
 
 ### Desarrollo de la práctica
 
@@ -37,6 +35,8 @@ Se hace pulsando el botón fork que está en la parte superior derecha del repos
    /222333
    /333444
    ```
+
+> Para crear la carpeta, se deben añadir un archivo "README.md" que incluya el nombre completo y el NRE de cada alumno.
 
 #### Paso 4: Realizar cambios y commits
 1. Cada uno de vosotros trabajará en su carpeta con el NRE del proyecto y realizará al menos dos commits locales significativos con mensajes descriptivos:
