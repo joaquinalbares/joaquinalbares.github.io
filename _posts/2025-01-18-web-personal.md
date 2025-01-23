@@ -13,7 +13,7 @@ tags:
 Para ello podeis seguir la [guía de inicio rápido](https://docs.github.com/es/pages/quickstart) disponible en la web 
 de GitHub.
 
-#### OPCIONAL (PARA OBTENTER NOTA SUPERIOR A 8) 
+#### OPCIONAL (PARA OBTENTER NOTA SUPERIOR A 7) 
 Crear la web usando la herramienta Jekyll. Esta herramienta permite crear páginas usando plantillas y formato CSS.
 
 Puedes usar los siguientes enlaces para que te sirvan de referencia:
