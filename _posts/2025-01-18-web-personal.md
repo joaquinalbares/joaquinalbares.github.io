@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICA DE FORK Y PULL REQUEST"
+title: "USO DE GITHUB PAGES Y JEKYLL"
 date: 2025-01-18T00:01:30-01:00
 categories:
   - UT05
