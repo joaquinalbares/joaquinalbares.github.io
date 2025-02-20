@@ -13,10 +13,15 @@ tags:
 Para ello podeis seguir la [guía de inicio rápido](https://docs.github.com/es/pages/quickstart) disponible en la web 
 de GitHub.
 
-#### OPCIONAL (PARA OBTENTER NOTA SUPERIOR A 7) 
+La web debe contener al menos dos páginas web con texto, imágenes y aplicar algún estilo CSS. 
+
+#### 
 Crear la web usando la herramienta Jekyll. Esta herramienta permite crear páginas usando plantillas y formato CSS.
 
 Puedes usar los siguientes enlaces para que te sirvan de referencia:
+
+Instalación de Jekyll en Ubuntu:
+- [Pasos previos](https://jekyllrb.com/docs/installation/ubuntu/)
 
 [https://nainagurung.medium.com/publish-github-pages-using-jekyll-369a8e2800b7](https://nainagurung.medium.com/publish-github-pages-using-jekyll-369a8e2800b7)
 
