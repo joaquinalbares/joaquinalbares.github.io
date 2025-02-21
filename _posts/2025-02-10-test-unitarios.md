@@ -13,7 +13,7 @@ Las Pruebas de Caja Negra, constituyen una técnica de pruebas de software en pa
 
 En estas pruebas, no hace falta conocer la estructura interna del programa ni su funcionamiento. Su busca la obtención de casos de prueba que demuestren que las salidas que devuelve la aplicación son las esperadas en función de las entradas que se proporcionen.
 
-![test de caja negra](/assets/images/caja_negra.jpg)
+![caja_negra.jpg](/assets/images/caja_negra.jpg)
 
 A este tipo de pruebas también se les llama prueba de comportamiento.
 
@@ -69,22 +69,22 @@ Maven organiza los proyectos de una manera particular. Para generar un proyecto 
 
 Y elegir "maven-archetype-quickstart":
 
-![ee6942572fd6f1b56dcf32f9e8d715c7.png](/assets/images/517722adc426487f8ab415266d56c9b8.png)
+![elegimos maven quickstart](/assets/images/ee6942572fd6f1b56dcf32f9e8d715c7.png)
 
 Dentro las versiones, elegimos la última estable (a día de hoy, la 1.4) y damos nombre al ```group-id``` que desarrolla el proyecto, que suele ser la URL de la empresa en notación inversa:
 
-![d7ec695a066df06dd8fe29340ffe7fd5.png](/assets/images/3638eb64c6184fc48db4dc504123c1d2.png)
+![d7ec695a066df06dd8fe29340ffe7fd5.png](/assets/images/d7ec695a066df06dd8fe29340ffe7fd5.png)
 
 Ahora damos nombre al ```artifact``` a desarrollar, esto es, el nombre del proyecto:
 
-![d70a5d8e63bf1adea9a68f8c8e2d4ab2.png](/assets/images/059a209fff874e8eafce8f74dd1e415c.png)
+![d70a5d8e63bf1adea9a68f8c8e2d4ab2.png](/assets/images/d70a5d8e63bf1adea9a68f8c8e2d4ab2.png)
 
 Y elegimos la carpeta donde se guardará.
 
 Ahora Visual Studio Code ejecuta una serie de comandos que se descargan las librerías necesarias y nos hace una serie de preguntas para configurar el proyecto.
 Esto se puede ver en la parte inferior del proyecto:
 
-![9edcebd9be45ece22b89436fed3174ef.png](/assets/images/35f1a83e781f4c379c1a237f967e98d4.png)
+![9edcebd9be45ece22b89436fed3174ef.png](/assets/images/9edcebd9be45ece22b89436fed3174ef.png)
 
 Podemos pulsar Intro para aceptar los valores por defecto.
 
@@ -296,13 +296,13 @@ Ahora vamos a crear una clase de prueba para verificar nuestra calculadora. En g
 
 Para el caso de VSCode, hacemos clic con el encima de la clase a probar y seleccionamos "Source Actions -> Generate Test":
 
-![95df7702484d259ec464ec1f013cd476.png](/assets/images/5ff4ca7716b3401e9a8cd5ccefed140f.png)
+![95df7702484d259ec464ec1f013cd476.png](/assets/images/95df7702484d259ec464ec1f013cd476.png)
 
 Por defecto nos sale el archivo sobre el que estamos trabajando, pero podemos escribir otro diferente.
 
 En la parte izquierda elegimos los tipos de métodos sobre los que queremos generar los test y pulsamos  "OK"  
 
-![c016f9fed0bd01ee119d204a794218c8.png](/assets/images/9e41395a0f534d0e81aaf81567cdadbf.png)
+![c016f9fed0bd01ee119d204a794218c8.png](/assets/images/c016f9fed0bd01ee119d204a794218c8.png)
 
 Lo que nos genera un nuevo archivo que se ubicará en la carpeta "test" de nuestro proyecto y que tendrá la siguiente estructura:
 
@@ -357,7 +357,7 @@ El procedimiento sería similar para el resto.
 
 Para pasar el test, hacemos clic encima del triángulo derecho que está a la izquierda test que queremos ejecutar:
 
-![7775bed4acf6bc5d428963e9e0a87422.png](/assets/images/0619479897a0460ea75fa69fb073a71e.png)
+![7775bed4acf6bc5d428963e9e0a87422.png](/assets/images/7775bed4acf6bc5d428963e9e0a87422.png)
 
 y en la ventana de resultados podemos ver que el test se pasa satisfactoriamente si aparece el círculo verde a la izquierda del test.
 
@@ -450,3 +450,5 @@ public class CalculadoraTest {
 ```
 
 Al ejecutar el test, vemos que todas las pruebas pasan correctamente.
+
+
