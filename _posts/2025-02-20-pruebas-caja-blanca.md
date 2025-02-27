@@ -31,12 +31,12 @@ En el caso de condiciones AND y OR, se generan un mayor número de bifurcaciones
 
 Para una condición AND:
 
-![estructura and.png](imagenes/grafo_and.png)
+![estructura and.png](/assets/images/grafo_and.png)
 **ESTRUCTURA AND**
 
 Para una condición OR:
 
-![estructura or.png](imagenes/cfg_or.jpg)
+![estructura or.png](/assets/images/cfg_or.jpg)
 **ESTRUCTURA OR**
 
 Las características más importantes de los grafos de flujo son:
@@ -95,11 +95,11 @@ Por tanto, podemos decir que las pruebas exhaustivas no son posibles. Deberíamo
 Imaginemos un programa sencillo que nos dice si una persona es mayor o menor de edad. En el programa introducimos una edad y el sistema responde que es mayor de edad si su valor es mayor o igual a 18 años. 
 
 El diagrama de flujo asociado al código puede verse en la siguiente imagen:
-![5947e117dfbfa77ad9a9e48613943228.png](imagenes/5947e117dfbfa77ad9a9e48613943228.png)
+![5947e117dfbfa77ad9a9e48613943228.png](/assets/images/5947e117dfbfa77ad9a9e48613943228.png)
 
 Podemos establecer una equivalencia entre el diagrama de flujo (organigrama) obtenido y el grafo de manera muy sencilla:
 
-![equivalencia organigrama-grafo](imagenes/equivalencia_organigrama_grafo.jpg)
+![equivalencia organigrama-grafo](/assets/images/equivalencia_organigrama_grafo.jpg)
 
 Una de las cosas que llama la atención es el hecho de que los finales de los bucles y los condicionales se consideran nodos del grafo, algo que hay que tener muy en cuenta a la hora de elaborar nuestro grafo.
 
