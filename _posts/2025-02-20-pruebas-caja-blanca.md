@@ -24,8 +24,8 @@ La prueba del camino básico es una técnica de prueba de caja blanca que permit
 ### GRAFO DE FLUJO
 Para la obtención de la medida de la complejidad lógica (o complejidad ciclomática) emplearemos una representación del flujo de control denominada grafo de flujo o grafo del programa.
 
-![9439fa3f9da5a6a99012a5b2623f2fcd.png](assets/images/9439fa3f9da5a6a99012a5b2623f2fcd.png)
-![0c7a4fa3c1ad8c1100f065789acf9bc8.png](assets/images/0c7a4fa3c1ad8c1100f065789acf9bc8.png)
+![9439fa3f9da5a6a99012a5b2623f2fcd.png](/assets/images/9439fa3f9da5a6a99012a5b2623f2fcd.png)
+![0c7a4fa3c1ad8c1100f065789acf9bc8.png](/assets/images/0c7a4fa3c1ad8c1100f065789acf9bc8.png)
 
 En el caso de condiciones AND y OR, se generan un mayor número de bifurcaciones de acuerdo con las siguientes estructuras.
 
