@@ -13,11 +13,7 @@ Las Pruebas de Caja Negra, constituyen una técnica de pruebas de software en pa
 
 En estas pruebas, no hace falta conocer la estructura interna del programa ni su funcionamiento. Su busca la obtención de casos de prueba que demuestren que las salidas que devuelve la aplicación son las esperadas en función de las entradas que se proporcionen.
 
-<<<<<<< Updated upstream
 ![caja_negra.jpg](/assets/images/caja_negra.png)
-=======
-![caja_negra.jpg](/assets/images/caja_negra.jpg)
->>>>>>> Stashed changes
 
 A este tipo de pruebas también se les llama prueba de comportamiento.
 
