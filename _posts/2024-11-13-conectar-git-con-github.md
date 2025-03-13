@@ -37,7 +37,7 @@ ls -al ~/.ssh
 1. En la terminal, ejecuta el siguiente comando para generar una clave SSH:
 
     ```bash
-   ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github "NRE@alu365.murciaeduca.es"
+   ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github -C "NRE@alu365.murciaeduca.es"
     ```
 
    Este comando genera una clave SSH usando el tipo de encriptación ED25519, que es más seguro que RSA. 
@@ -128,8 +128,14 @@ Hi TuNombreDeUsuario! You've successfully authenticated, but GitHub does not pro
 1. Conecta el repositorio local con el repositorio remoto en GitHub utilizando el comando `git remote set-url origin` seguido de la URL SSH de tu repositorio de GitHub. La URL SSH estará en la página del repositorio de GitHub, bajo el botón **Code** (asegúrate de elegir la opción "SSH"):
 
     ```bash
-    git remote set-url origin git@github.com:TuNombreDeUsuario/NombreDelRepositorio.git
+    git remote add origin git@github.com:TuNombreDeUsuario/NombreDelRepositorio.git
     ```
+	
+	En caso de haber conficurado previamente el reposotiorio con https:, debemos cambiar la referencia 
+
+    ```bash
+	   git remote set-url origin git@github.com:TuNombreDeUsuario/NombreDelRepositorio.git
+	```
 
 2. Para verificar que el repositorio remoto se agregó correctamente, puedes usar el siguiente comando:
 
