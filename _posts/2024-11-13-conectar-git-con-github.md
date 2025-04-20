@@ -8,6 +8,8 @@ tags:
   - practicas
 ---
 
+<script src="/assets/scripts/copyCode.js"></script>
+
 ## **CONECTAR UN REPOSITORIO DE GIT CON GITHUB**
 
 Damos por hecho que Git estás instalado y configurado correctamente, y que el repositorio está iniciado. Si no es asi, haz estos pasos:
@@ -36,9 +38,10 @@ ls -al ~/.ssh
 
 1. En la terminal, ejecuta el siguiente comando para generar una clave SSH:
 
-    ```bash
-   ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github -C "NRE@alu365.murciaeduca.es"
-    ```
+  {% include codeHeader.html %}
+  ```bash
+  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github -C "NRE@alu365.murciaeduca.es"
+  ```
 
    Este comando genera una clave SSH usando el tipo de encriptación ED25519, que es más seguro que RSA.
 
