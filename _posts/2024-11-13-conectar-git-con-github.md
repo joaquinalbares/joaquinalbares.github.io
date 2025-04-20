@@ -40,7 +40,7 @@ ls -al ~/.ssh
    ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_github -C "NRE@alu365.murciaeduca.es"
     ```
 
-   Este comando genera una clave SSH usando el tipo de encriptación ED25519, que es más seguro que RSA. 
+   Este comando genera una clave SSH usando el tipo de encriptación ED25519, que es más seguro que RSA.
 
    Ahora podemos poner una "passphrase" o contraseña para mayor seguridad (esto es opcional pero recomendable). Si no queremos contraseña, **pulsamos Intro**.
 
@@ -55,8 +55,8 @@ ls -al ~/.ssh
     ```bash
     eval "$(ssh-agent -s)"
     ```
-4. Y añadimos la clave:     
-    ssh-add ~/.ssh/id_ed25519
+4. Y añadimos la clave:
+    ssh-add ~/.ssh/id_ed25519_github
     ```
 
 ---
@@ -85,7 +85,7 @@ De esta manera nos aseguramos que la clase SHH va a estar disponible cuando la n
 1. Copia la clave pública generada en tu sistema con el siguiente comando:
 
     ```bash
-    cat ~/.ssh/id_ed25519.pub
+    cat ~/.ssh/id_ed25519_github.pub
     ```
 
    Copia el texto de la clave que aparece en la terminal.
@@ -130,8 +130,8 @@ Hi TuNombreDeUsuario! You've successfully authenticated, but GitHub does not pro
     ```bash
     git remote add origin git@github.com:TuNombreDeUsuario/NombreDelRepositorio.git
     ```
-	
-	En caso de haber conficurado previamente el reposotiorio con https:, debemos cambiar la referencia 
+
+	En caso de haber conficurado previamente el reposotiorio con https:, debemos cambiar la referencia
 
     ```bash
 	   git remote set-url origin git@github.com:TuNombreDeUsuario/NombreDelRepositorio.git
@@ -149,7 +149,7 @@ Hi TuNombreDeUsuario! You've successfully authenticated, but GitHub does not pro
 
 ### Paso 6: Hacer tu primer push
 
-Agrega un archivo al repositorio y realiza tu primer commit para probar la conexión. 
+Agrega un archivo al repositorio y realiza tu primer commit para probar la conexión.
 
 1. Crea un archivo de prueba, por ejemplo:
 
