@@ -90,7 +90,7 @@ Javadoc es una herramienta incluida en el JDK que genera documentación en forma
 ```java
 /**
 * <h2>Clase Empleado, se utiliza para crear y leer empleados de una BD</h2>
-* Busca información de javadoc en < a href="http://google.com">GOOGLE</a>
+* Busca información de javadoc en <a href="http://google.com">GOOGLE</a>
 * @see <a href="http://www.google.com">Google</a>
 * @author JRV
 * @since 1.0 */
