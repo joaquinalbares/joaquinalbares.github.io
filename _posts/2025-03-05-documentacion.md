@@ -88,7 +88,6 @@ Javadoc es una herramienta incluida en el JDK que genera documentación en forma
 
 ### Ejemplo con etiquetas:
 ```java
-```java
 /**
 * <h2>Clase Empleado, se utiliza para crear y leer empleados de una BD</h2>
 * Busca información de javadoc en < a href="http://google.com">GOOGLE</a>
@@ -131,7 +130,7 @@ public class Empleado {
   * @return <ul>
   *   <li>true: el nombre es una cadena vacía</li>
   *   <li>false: el nombre no es una cadena vacía</li>
-  * <ul>
+  * </ul>
   */
   private boolean comprobar(){
     if(nombre.equals("")) {
