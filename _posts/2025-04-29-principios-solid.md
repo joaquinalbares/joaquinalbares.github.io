@@ -1,6 +1,6 @@
 ---
 title: "UT04 - DOCUMENTACIÓN Y PRUEBAS: PRINCIPIOS SOLID"
-date: 2025-03-02T00:01:30-01:00
+date: 2025-04-29T00:01:30-01:00
 categories:
   - UT04
 tags:
