@@ -1,6 +1,6 @@
 ---
 title: "UT05 - EJERCICIO UML"
-date: 2025-05-06T00:01:30-01:00
+date: 2025-05-15T00:01:30-01:00
 categories:
   - UT06
 tags:
