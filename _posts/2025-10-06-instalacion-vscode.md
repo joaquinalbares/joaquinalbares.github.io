@@ -1,6 +1,6 @@
 ---
 title: "PASOS INICIALES: INSTALACIÓN DE VISUAL STUDIO CODE"
-date: 2025-10-06T15:34:30-04:00
+date: 2025-10-06T01:34:30-04:00
 categories:
   - UT02
 tags:
