@@ -25,34 +25,26 @@ Los pasos son los siguientes:
   ```
   sudo apt install apt-transport-https wget gpg -y
   ```
-2.  Descargamos la clave gpg para verificar la integridad y el origen del paquete. 
+2.  Descargamos e instalamos la clave gpg para verificar la integridad y el origen del paquete. 
   ```
-  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-  ```
-
-3. Instamos la clave en nuestro 'keyring'.
-  ```
-sudo install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
   ```
 
-4. Añadimos el repositorio ofical de Visual Studio Code.
+3. Añadimos el repositorio ofical de Visual Studio Code.
   ```
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/code stable main | sudo tee /etc/apt/sources.list.d/vscode.list
   ```
-5. Borramos la clave gpg descargada del paso 2.
-  ```
- rm -f microsoft.gpg
-  ```
-6. Actualizamos el sistema de nuevo para que cargue los nuevos repositorios
+
+4. Actualizamos el sistema de nuevo para que cargue los nuevos repositorios
   ```
   apt update
   ```
-7. Instalamos Visual Studio Code.
+5. Instalamos Visual Studio Code.
   ```
   sudo apt install code
   ```  
 
-8. Comprobamos que se ha instalado correctamente.
+6. Comprobamos que se ha instalado correctamente.
   ```
   code --version
   ```  
