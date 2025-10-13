@@ -46,3 +46,6 @@ Para compartir este repositiorio, del menús superior hacemos clic en "Settings"
 
 ![Nuevo resopositorio](/assets/images/2025-10-10f.png)
 Hacemos clic en "Add people" y escribimos ```joaquinalbares``` 
+
+
+>  Para reclamar nuestras ventajas de estudiate, podemos hacerlo en : [https://docs.github.com/es/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student](https://docs.github.com/es/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student)
