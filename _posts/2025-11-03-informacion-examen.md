@@ -1,0 +1,25 @@
+---
+title: "PRÁCTICA 04 UT02"
+date: 2025-11-03T10:34:30-04:00
+categories:
+  - UT02
+tags:
+  - examen
+  - importante
+---
+
+Se deben comprobar si están instalados los siguientes lenguajes de programación
+
+- Python
+- Ruby
+- C++
+- PHP
+
+## NOTAS PARA EL EXAMEN
+
+Se creará un un documento en markdown llamado ```P04 - lenguajes.md``` con el siguiente contenido:
+
+1. Si el lenguaje ya está instalado en la máquina, basta con una captura del comando ejecutado.
+2. En caso controarop Instalación del lenguaje incluyendo la lista de instrucciones ejecutadas.
+3. Incidencias detectadas.
+4. Páginas consultadas.
