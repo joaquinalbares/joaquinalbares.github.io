@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICAS UT02"
+title: "PRÁCTICAS UT01"
 date: 2025-11-08T01:00:00-04:00
 categories:
   - UT01
