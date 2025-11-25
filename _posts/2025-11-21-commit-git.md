@@ -1,12 +1,14 @@
 ---
 title: "PRÁCTICA COMMITS DE GIT"
-date: 2024-11-20T00:01:30-01:00
+date: 2025-11-21T00:01:30-01:00
 categories:
   - UT05
 tags:
   - git
   - practicas
 ---
+
+> **NOTAS IMPORTANTES:** Todos los comandos se deben ejecutar en la terminal, bien de VSCode o desde la terminal nativa.
 
 ### **Ejercicio 1: Añadir archivos y realizar un commit inicial**
 1. **Objetivo:** Practicar los comandos `add` y `commit`.
