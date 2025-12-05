@@ -116,7 +116,7 @@ git checkout -b caracteristica1
 ```
 
 2. **Haz cambios en la nueva rama:**  
-Abre el archivo `README.md` y añade una línea como:  
+Entra en la carpeta `UT05` (créala si no exite) y dentro crea una carpeta llamada `P02`. Crea y abre el archivo `README.md` y añade una línea con el siguiente texto:  
 
 ```
 Trabajando en la rama caracteristica1.
@@ -137,7 +137,7 @@ Vuelve a la rama `main`:
 git checkout main
 ```
 	 
-Añade una línea diferente al archivo `README.md`, por ejemplo:
+Haz el mismo proceso de antes y escribe una línea diferente al archivo `README.md`, por ejemplo:
 
 ```
 Actualizando desde la rama principal.
