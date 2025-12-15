@@ -62,32 +62,7 @@ tags:
    git pull upstream main
    ```
 
-## 1) Preparación:
-- Cada equipo clona su repositorio.
-- Un miembro **crea** y trabaja en la rama tarea-a y otro en tarea-b.
-- Ambos deben modificar exactamente la misma línea del archivo README.md con contenidos distintos (por ejemplo, cambiar la descripción de un apartado o añadir su nombre en la misma línea).
-
-## 2) Primer conflicto (al hacer push):
-
-- El primer estudiante:
-  - Realiza commit en su rama con mensaje “Provocando conflicto”.
-  - Intenta hacer git push.
-  
-- El segundo estudiante:
-  - Intenta hacer push y encontrará un error, por lo que deberá:
-    - Ejecutar git pull o git pull --rebase desde su rama.
-    - Resolver el conflicto en el archivo README.md eliminando los marcadores de conflicto y dejando una versión combinada aceptable.
-    - Hacer git add, git commit y git push.
-
-## 3) Segundo conflicto (al hacer pull request):
-- Uno de los estudiantes crea un pull request de su rama hacia main. Para ello, debe hacer un  push de tus cambios al repositorio del equipo y luego ir a la página del repositorio original para crear el pull request desde la interfaz web, comparando las ramas y añadiendo un título y una descripción.
-- Desde GitHub, modifica directamente la misma línea en main para generar un conflicto con la rama del pull request.
-- El equipo debe:
-  - Traer cambios de main a su rama (git checkout rama, git pull origin main o git merge main).
-  - Resolver el conflicto localmente.
-  - Subir los cambios y actualizar el pull request hasta que quede “mergeable”.
-
-## 4) Entrega:
+## Entrega:
 - Cada estudiante deberá entregar pantallazos de los siguientes pasos:
   - Historial con los commits “Provocando conflicto” y uno de “Arreglando conflicto” o similar.
   - Un pull request fusionado a main.
