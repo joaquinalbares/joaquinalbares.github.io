@@ -9,6 +9,7 @@ tags:
 ---
 #### Paso 1: Crear un fork del repositorio
 1. Cada alumno debe realizar un **fork** del repositorio creado para la práctica desde la web de GitHub.
+
 ![Imagen](assets/images/2025-12-15 123815.png)
 
 #### Paso 2: Clonar el repositorio forkeado
