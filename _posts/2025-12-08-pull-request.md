@@ -46,7 +46,7 @@ tags:
    ```
 
 #### Paso 6: Abrir una pull request
-1. Cada estudiante abrirá una **pull request** desde su repositorio forkeado hacia el repositorio principal del profesor.
+1. Cada estudiante abrirá una **pull request** desde su repositorio forkeado hacia el repositorio principal del grupo.
 2. Incluyan una descripción clara de los cambios realizados.
 
 #### Paso 7: Revisar y fusionar pull requests
@@ -61,19 +61,3 @@ tags:
    ```bash
    git pull upstream main
    ```
-
-## Entrega:
-- Cada estudiante deberá entregar pantallazos de los siguientes pasos:
-  - Historial con los commits “Provocando conflicto” y uno de “Arreglando conflicto” o similar.
-  - Un pull request fusionado a main.
-  - Un breve archivo conflictos.md donde describan:
-    - Cómo se produjo cada conflicto.
-    - Qué comandos usaron para resolverlo.
-    - Qué versión final de la línea decidieron mantener y por qué.
-
-## Criterios de evaluación
-- Correcta configuración de ramas y uso de git clone, checkout, pull, merge/pull --rebase, add, commit y push.
-- Capacidad de provocar el conflicto exactamente donde se indica.
-- Resolución correcta de los conflictos (sin marcadores de conflicto en los archivos finales).
-- Pull request limpio y fusionado en main.
-- Explicación clara en conflictos.md de los pasos seguidos y dificultades encontradas.
