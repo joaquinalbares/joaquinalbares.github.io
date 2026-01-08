@@ -10,7 +10,9 @@ tags:
 ## RESUMEN DE LA PRÁCTICA A REALIZAR
 La práctica consiste en realizar un fork de un repositorio y realizar un pull request para fusionar los cambios en el repositorio original. Para ello cada alumno debe hacer fork de los repositorios de los demás miembros del equipo y hacer un **pull request** para cada uno.
 
-### Desarrollo de la práctica
+---
+
+## DESARROLLO DE LA PRÁCTICA
 
 ### Pasos previos: Creación de equipos y repositorios.
 Crearemos equipos de tres alumnos en nuestra organización:
@@ -71,6 +73,6 @@ Cada  alumno aprobará las **pull request** de cada alumno y se dará por finali
 
 ---
 
-### DOCUMENTACIÓN A ENTREGAR
+## DOCUMENTACIÓN A ENTREGAR
 
 Capturas de pantalla de cada uno de los pasos en la carpeta `UT05/P04` del repositorio de cada alumno.
