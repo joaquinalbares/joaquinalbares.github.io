@@ -26,7 +26,7 @@ Una vez creado el repositorio, debe asignar como colaboradores al equipo al que 
 
 Se hace pulsando el botón fork que está en la parte superior derecha del repositorio:
 
-![botón FORK](/assets/images/2026-01-08-01.jpg)
+![botón FORK](/assets/images/2026-01-08-01.png)
 
 #### Paso 2: Clonar los repositorios forkeados
 Cada alumno debe clonar sus dos repositorios forkeados a su ordenador local usando:
