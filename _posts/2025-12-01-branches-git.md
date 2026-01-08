@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICA RAMAS Y CONFLICTOS EN GIT"
+title: "UT05 - P02 - PRÁCTICA RAMAS Y CONFLICTOS EN GIT"
 date: 2025-12-01T00:01:30-01:00
 categories:
   - UT05

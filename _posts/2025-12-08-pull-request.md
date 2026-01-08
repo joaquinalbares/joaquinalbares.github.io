@@ -1,5 +1,5 @@
 ---
-title: "PRÁCTICA TRABAJO EN EQUIPO"
+title: "UT05 - P03 - PRÁCTICA TRABAJO EN EQUIPO"
 date: 2025-12-08T00:01:30-01:00
 categories:
   - UT05
