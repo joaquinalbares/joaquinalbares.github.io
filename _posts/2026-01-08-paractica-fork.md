@@ -47,7 +47,7 @@ Los equipos se organizarán de la siguiente manera:
 - El alumno 2 creará un fork del repositorio del alumno 3  y creará a carpeta `HTML`, con un archivo HTML.
 - El alumno 2 creará un fork del repositorio del alumno 1  y creará a carpeta `CSS`, con un archivo CSS.
 - El alumno 3 creará un fork del repositorio del alumno 1  y creará a carpeta `HTML`, con un archivo HTML.
-- El alumno 3 creará un fork del repositorio del alumno 1  y creará a carpeta `CSS`, con un archivo CSS.
+- El alumno 3 creará un fork del repositorio del alumno 2  y creará a carpeta `CSS`, con un archivo CSS.
 
 #### Paso 4: Realizar cambios y commits
 Cada uno de vosotros trabajará en su carpeta en local y hará el commit con el siguiente mensaje descriptivo `El alumno <NRE> ha añadido un archivo HTML`.
