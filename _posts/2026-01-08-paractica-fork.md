@@ -24,11 +24,11 @@ Cada alumno debe crear un repositorio propio en GitHub, con el nombre `<NRE>_UT0
 Una vez creado el repositorio, debe asignar como colaboradores al equipo al que pertenece. Esto se hace en `Settings`, apartado `Collaborators and teams`, y seleccionando el equipo.
 
 #### Paso 1: Crear un fork del repositorio
- Cada uno de vosotros debe realizar un **fork** de ls dos repositorios del resto de compañeros del equipo en su cuenta de GitHub. Esto generará una nueva URL que será la que useis para vuestro trabajo. La llamaremos `<NRE_ORIGINAL>_UT05_P05_FORK_<NRE>`, donde `<NRE_ORIGINAL>` es el número de NRE del alumno que ha creado el repositorio original y `<NRE>` es el número de NRE del alumno que está forkeando.
+ Cada uno de vosotros debe realizar un **fork** de ls dos repositorios del resto de compañeros del equipo en su cuenta de GitHub. Esto generará una nueva URL que será la que useis para vuestro trabajo. La llamaremos `<NRE_ORIGINAL>_UT05_P04_FORK_<NRE>`, donde `<NRE_ORIGINAL>` es el número de NRE del alumno que ha creado el repositorio original y `<NRE>` es el número de NRE del alumno que está forkeando.
 
 Se hace pulsando el botón fork que está en la parte superior derecha del repositorio:
 
-![botón FORK](assets/images/2026-01-08-01.png)
+![botón FORK](/assets/images/2026-01-08-01.png)
 
 #### Paso 2: Clonar los repositorios forkeados
 Cada alumno debe clonar sus dos repositorios forkeados a su ordenador local usando:
