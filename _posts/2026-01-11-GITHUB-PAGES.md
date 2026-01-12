@@ -46,8 +46,8 @@ Ejecuta `mkdocs --version`para comprobar que todo funcionaba bien.
 Para crear un nuevo proyecto, ejecute el siguiente comando desde la línea de comandos:
 
 ```bash
-mkdocs new my-project
-cd my-project
+mkdocs new web-personal
+cd web-personal
 ls -la
 ```
 
