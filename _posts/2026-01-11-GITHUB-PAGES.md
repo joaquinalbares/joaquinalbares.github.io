@@ -22,7 +22,7 @@ Puede comprobar si ya tiene estos instalados desde la línea de comandos:
 
 ```bash
 python3 --version
-Python 3.8.2
+Python 3.12.2
 ```
 
 
@@ -34,7 +34,7 @@ apt install pipx
 pipx install some-python-application
 ```
 
-Instalar el mkdocsPaquete usando pip:
+Instalar el paquete mkdocs usando pip:
 
 ```bash
 pipx install mkdocs
