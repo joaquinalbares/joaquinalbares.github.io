@@ -57,6 +57,6 @@ MkDocs viene con un servidor de dev incorporado que le permite obtener una vista
 
 ```bash
 mkdocs serve
-```bash
+```
 
 Abrimos http://127.0.0.1:8000/ en el navegador y vemos la página de inicio predeterminada que se muestra.
