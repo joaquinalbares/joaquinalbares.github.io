@@ -21,7 +21,7 @@ MkDocs requiere una versión reciente de Python y el paquete Python Gerente, pip
 Puede comprobar si ya tiene estos instalados desde la línea de comandos:
 
 ```bash
-python --version
+python3 --version
 Python 3.8.2
 ```
 
