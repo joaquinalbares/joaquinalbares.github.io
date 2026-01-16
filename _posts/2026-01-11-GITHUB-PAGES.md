@@ -42,7 +42,9 @@ pip install mkdocs
 
 Ahora deberíamos tener el comando `mkdocs` instalado en el sistema.
 
-Podemos ejecutar la orden `mkdocs --version`para comprobar que todo funcionaba bien. Si nos dice que no se puede ejecutar la orden, debemos escribir `pipx ensurepath` y recargar el terminal para que funcione correctamente.
+Podemos ejecutar la orden `mkdocs --version` para comprobar que todo funcionaba bien. 
+
+  > Si nos dice que no se puede ejecutar la orden, y hemos instalado mkdocs con pipx, debemos escribir `pipx ensurepath` y recargar el terminal para que funcione correctamente.
 
 
 ### 3. Creando un nuevo proyecto
@@ -74,7 +76,7 @@ Abrimos [http://127.0.0.1:8000/](http://127.0.0.1:8000/) en el navegador y vemos
 
 ### 4. Configurar MkDocs Material
 
-- Editar `mkdocs.yml` y dejar al menos algo similar a:[][][]
+- Editar `mkdocs.yml` y escribir al menos algo similar a:
 
 ```yaml
 site_name: Proyecto de <Nombre Apellidos>
@@ -92,14 +94,17 @@ Ahora debemos hacer los siguientes pasos en este orden:
 
   1. Crear un repositorio nuevo en GitHub, por ejemplo `proyecto-mkdocs`, no es necesario que se incluya el archivo `README.md`.
   
-  2. Inicializar Git en la carpeta del proyecto:
+  2. Inicializar Git en la carpeta del proyecto, lo que podemos hacer en la linea de comandos:
+    
     - `git init`
     - `git add .`
     - `git commit -m "Inicialización proyecto MkDocs"`
     - `git branch -M main`
     - `git remote add origin https://github.com/<tu_usuario>/proyecto-mkdocs.git`
     - `git push -u origin main`.
-
+  
+  O desde VS Code.
+  
 ### 6. Desplegar en GitHub Pages
 
 Para desplegar el sitio en GitHub Pages, debemos ejecutar:
