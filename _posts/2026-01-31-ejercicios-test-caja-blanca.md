@@ -1,5 +1,5 @@
 ---
-title: "UT03 - PRUEBAS DE CAJA BLANCA"
+title: "UT03 - EJERCICIOS PRUEBAS DE CAJA BLANCA"
 date: 2026-01-31T00:01:30-01:00
 categories:
   - UT03
@@ -178,7 +178,6 @@ public int primerNumero(int n) {
         else {
             primera = 0;
         }
-
 
         return primera;
     }

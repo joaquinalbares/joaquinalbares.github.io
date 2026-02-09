@@ -188,7 +188,18 @@ public class Calculadora {
 ### 4.2. CREANDO EL TEST
 Ahora vamos a crear una clase de prueba para verificar nuestra calculadora. En genera podremos crear la plantilla del test desde el menú de nuestro IDE o bien hacerlo desde cero.
 
-Para el caso de VSCode, hacemos clic con el encima de la clase a probar y seleccionamos "Source Actions -> Generate Test":
+En primer lugar, debemos habilitar los test para nuestro proyecto. Desde VSCode podemos pinchar en la parte izquierda, el icono de los test 
+
+![ut03_test.png](/assets/images/ut03_test.png)
+
+Y luego en la parte superior derecha, el icono de "Enable Java Test":
+
+![ut03_enable java.png](/assets/images/ut03_enable java.png)
+
+Debemos elegir la opción `JUNIT Jupiter` Lo que nos descarga la librería de JUnit y nos crea la carpeta "test" dentro de nuestro proyecto, donde se guardarán los test que creemos.
+
+Una vez que hemos habilitado la creación de tests, podemos crear la clase de test para nuestra clase Calculadora. Para ello, podemos usar el menú de nuestro IDE o bien crear la clase de test desde cero.
+Si optamos por crearlos de manera automatizada, para el caso de VSCode, hacemos clic con el encima de la clase a probar y seleccionamos "Source Actions -> Generate Test":
 
 ![95df7702484d259ec464ec1f013cd476.png](/assets/images/95df7702484d259ec464ec1f013cd476.png)
 
@@ -239,12 +250,12 @@ Como muestra vamos a comenzar creando el test para el método ```suma()```. Debe
 y creamos el test mediante el procedimiento explicado anteriormente:
 
 ```java
-    @Test
-	@DisplayName("1 + 1 = 2")
-	void sumarDosNumeros() {
-		Calculator calculadora = new Calculadora(1, 1);
-		assertEquals(2, calculadora.suma(), "1 + 1 debe ser igual a 2");
-	}
+@Test
+@DisplayName("1 + 1 = 2")
+void sumarDosNumeros() {
+  Calculadora calculadora = new Calculadora(1, 1);
+	assertEquals(2, calculadora.suma(), "1 + 1 debe ser igual a 2");
+}
 ```
 
 El procedimiento sería similar para el resto.
@@ -467,6 +478,3 @@ Aparte de las librerías para realizar los test, Maven permite instalar multitud
 - [REPOSOTORIO SONATYPE](https://central.sonatype.com/search?namespace=org.junit.jupiter). Es el repositorio recomendado por el desarrollador oficial, con las últimas actualizaciones del plugin.
 
 - [REPOSOTORIO MAVEN](https://mvnrepository.com/). Es el repositorio de Maven creado por un desarrollador particular con una gran cantidad de plugins.
-
-
-
