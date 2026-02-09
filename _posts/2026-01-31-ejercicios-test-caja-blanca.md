@@ -71,30 +71,45 @@ public static boolean esNumeroEspecial(int numero) {
 ### EJERCICIO 3
 
 ```java
-public int primerNumero(int n) {
-    int primera = 0;
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    int edad;
+    String genero;
+    
+    
+    // Validación de edad
+    do {
+        System.out.print("Introduce tu edad (18-100): ");
+        edad = sc.nextInt();
+        if (edad < 18) || edad > 100) {
+            System.out.println("Error: La edad debe estar entre 18 y 100.");
+        }
+    } while (edad < 18 || edad > 100);
+    
+    sc.nextLine(); // Consumir el salto de línea restante
+    
+    // Validación de género
+    do {
 
-    if (n < 10) {
-        primera = n;
+        System.out.print("Introduce tu género (Hombre/Mujer): ");
+        genero = sc.nextLine().trim().toLowerCase();
+        if (!genero.equals("hombre") && !genero.equals("mujer")) {
+            System.out.println("Error: Introduce solo 'Hombre' o 'Mujer'.");
+        }
+    } while (!genero.equals("hombre") && !genero.equals("mujer"));
+    
+    // Determinación del grupo según las condiciones
+    String grupo;
+    if ((genero.equals("mujer") && edad > 35) || (genero.equals("hombre") && edad > 50)) {
+        grupo = "A";
+    } else {
+        grupo = "B";
     }
-
-    if ((n >= 10) && (n < 100)) {
-        primera = n / 10;
-    }
-
-    if ((n >= 100) && (n < 100)) {
-        primera = n / 100;
-    }
-
-    if ((n >= 1000) && (n < 10000)) {
-        primera = n / 1000;
-    }
-
-    if (n >= 10000) {
-        primera = n / 10000;
-    }
-
-    return primera;
+    
+    System.out.println("Te corresponde el grupo " + grupo + ".");
+    
+    sc.close();
 }
 ```
 
@@ -102,34 +117,68 @@ public int primerNumero(int n) {
 
 ```java
 public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        double monto;
-        int experienciaLaboral;
-        String nivelRiesgo = "";
+    Scanner teclado = new Scanner(System.in);
+    double monto;
+    int experienciaLaboral;
+    String nivelRiesgo = "";
 
-        System.out.print("monto: ");
-        monto = Double.parseDouble(teclado.nextLine());
+    System.out.print("monto: ");
+    monto = Double.parseDouble(teclado.nextLine());
 
-        System.out.print("experienciaLaboral: ");
-        experienciaLaboral = Integer.parseInt((teclado.nextLine()));
+    System.out.print("experienciaLaboral: ");
+    experienciaLaboral = Integer.parseInt((teclado.nextLine()));
 
-        if (monto <= 0) {
-            System.out.println("Error: Monto o ingreso inválido");
-        } else {
-            if (monto > 150000) {
-                if (experienciaLaboral < 2)
-                    nivelRiesgo = "Alto";
-                else
-                    nivelRiesgo = "Medio";
-            } else if (monto <= 150000) {
-                if (experienciaLaboral < 5)
-                    nivelRiesgo = "Medio";
-                else
-                    nivelRiesgo = "Bajo";
-            } else {
+    if (monto <= 0) {
+        System.out.println("Error: Monto o ingreso inválido");
+    } else {
+        if (monto > 150000) {
+            if (experienciaLaboral < 2)
+                nivelRiesgo = "Alto";
+            else
+                nivelRiesgo = "Medio";
+        } else if (monto <= 150000) {
+            if (experienciaLaboral < 5)
+                nivelRiesgo = "Medio";
+            else
                 nivelRiesgo = "Bajo";
-            }
+        } else {
+            nivelRiesgo = "Bajo";
         }
-        System.out.println("Riesgo " + nivelRiesgo);
     }
+    System.out.println("Riesgo " + nivelRiesgo);
+}
 ```
+
+### EJERCICIO 5
+
+```java
+public int primerNumero(int n) {
+        int primera = 0;
+
+        if (n < 10) {
+            primera = n;
+        }
+
+        else if (n < 100) {
+            primera = n / 10;
+        }
+
+        else if (n < 100) {
+            primera = n / 100;
+        }
+
+        else if  (n < 10000) {
+            primera = n / 1000;
+        }
+
+        else if (n >= 10000) {
+            primera = n / 10000;
+        }
+
+        else {
+            primera = 0;
+        }
+
+
+        return primera;
+    }
