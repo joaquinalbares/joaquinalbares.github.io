@@ -24,9 +24,9 @@ public static void main(String[] args)
     if (cantidad > 8) {
         precioUnidad = 20.0;
     } else {
-        if (cantidad >= 4) { // aquí ya sabemos que cantidad está entre 4 y 8
+        if (cantidad >= 4) { //cantidad entre 4 y 8
             precioUnidad = 26.0;
-        } else { // menos de 4
+        } else { // cantidad menos de 4
             precioUnidad = 30.0;
         }
     }
@@ -65,5 +65,71 @@ public static boolean esNumeroEspecial(int numero) {
             }
         }
         return devuelve;
+    }
+```
+
+### EJERCICIO 3
+
+```java
+public int primerNumero(int n) {
+    int primera = 0;
+
+    if (n < 10) {
+        primera = n;
+    }
+
+    if ((n >= 10) && (n < 100)) {
+        primera = n / 10;
+    }
+
+    if ((n >= 100) && (n < 100)) {
+        primera = n / 100;
+    }
+
+    if ((n >= 1000) && (n < 10000)) {
+        primera = n / 1000;
+    }
+
+    if (n >= 10000) {
+        primera = n / 10000;
+    }
+
+    return primera;
+}
+```
+
+### EJERCICIO 4
+
+```java
+public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double monto;
+        int experienciaLaboral;
+        String nivelRiesgo = "";
+
+        System.out.print("monto: ");
+        monto = Double.parseDouble(teclado.nextLine());
+
+        System.out.print("experienciaLaboral: ");
+        experienciaLaboral = Integer.parseInt((teclado.nextLine()));
+
+        if (monto <= 0) {
+            System.out.println("Error: Monto o ingreso inválido");
+        } else {
+            if (monto > 150000) {
+                if (experienciaLaboral < 2)
+                    nivelRiesgo = "Alto";
+                else
+                    nivelRiesgo = "Medio";
+            } else if (monto <= 150000) {
+                if (experienciaLaboral < 5)
+                    nivelRiesgo = "Medio";
+                else
+                    nivelRiesgo = "Bajo";
+            } else {
+                nivelRiesgo = "Bajo";
+            }
+        }
+        System.out.println("Riesgo " + nivelRiesgo);
     }
 ```

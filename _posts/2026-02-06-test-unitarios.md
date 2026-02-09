@@ -1,11 +1,11 @@
 ---
 title: "TEST UNITARIOS CON JAVA Y MAVEN"  
-date: 2025-02-10T00:01:30-01:00  
+date: 2026-02-06T00:01:30-01:00  
 author: "Joaquin Rios"
 categories:
   - UT05  
 tags: 
-  - git
+  - test, tests unitarios
 ---
 
 ## 1.MARCO TEÓRICO
@@ -25,7 +25,7 @@ Con ellas intentamos encontrar errores de las siguientes categorías:
 - Errores de rendimiento. 
 - Errores de inicialización y finalización. 
 
-### TEST UNITARIOS
+## 2. INTODUCCIÓN A LOS TEST UNITARIOS
 
 Las pruebas o tests unitarios buscan verificar el comportamiento de una unidad específica, como una **función** o un **método** de clase, de forma aislada de otras partes del sistema. El objetivo es validar que cada unidad del software funciona según lo diseñado. Esto se hace proporcionando entradas conocidas a la unidad y comprobando que se reciben las salidas esperadas.
 
@@ -49,131 +49,35 @@ Algunas de las características que debemos tener en cuenta para elaborar unas p
 
 Para hacer nuestros test unitarios, podemos usar las librerías integradas que vienen por defecto en los IDE o bien importar nuestras propias librerías para realizar los test.
 
-## 1. REQUISITOS PREVIOS:  PROYECTOS MAVEN
+### 2.1. CARACTERÍSTICAS DE LOS TEST
 
-Maven es una herramienta de gestión y construcción de proyectos para Java. Su propósito principal es facilitar la gestión de dependencias, la compilación, la ejecución de pruebas y la creación de paquetes de manera eficiente y estandarizada.
+Para probar nuestra aplicación, debemos crear tantos test como métodos tenga la clase a probar, con las siguientes características:
 
-### 1.1 Características principales
+- Los métodos son públicos, no devuelven nada y no reciben ningún argumento.
+- El nombre de cada método es recomendable que se llame de la misma manera que el original o bien que vaya precedido de la palabra test (ej: testSuma(), testResta(), testMultiplica(), testDivide()) . 
+- Encima de cada uno de los métodos aparece la anotación ```@Test``` que indica al compilador que es un método de prueba.
+- Para los test parametrizados, incluiremos las anotaciones pertinentes.
 
-- **Gestión de dependencias**: Permite incluir fácilmente bibliotecas externas sin necesidad de descargarlas manualmente.
-- **Estructura estandarizada de proyectos**: Define una organización común para los proyectos Java.
-- **Automatización de procesos**: Facilita la compilación, pruebas y empaquetado de aplicaciones.
-- **Repositorio central**: Almacena las bibliotecas y plugins utilizados en el proyecto.
-- **Uso de archivos POM (Project Object Model)**: Define la configuración del proyecto en un archivo XML.
+Dentro de cada método de test, debemos seguir siempre el mismo procedimiento:
+- Creamos una instancia de la clase con los valores que nos interese.
+- Invocamos al método que queremos testar. 
+- Comprobamos que el valor obtenido coincide con el valor deseado. Para ello hacemos uso de los métodos que nos ofrece la Librería JUnit, vistos en el apartado anterior.
 
-### 1.2. Estructura de un proyecto Maven
 
-Maven organiza los proyectos de una manera particular. Para generar un proyecto Maven debemos ejecutar en la paleta de comandos
+### 2.3. Preparar Visual Studio Code para Java y JUnit
 
-`Maven: New Project`
+Para trabajar con Java y pruebas unitarias en VS Code, es necesario instalar algunas extensiones en VS. Las recomendaddas son:
 
-Y elegir "maven-archetype-quickstart":
+  - “Extension Pack for Java” (incluye soporte de lenguaje, depuración, etc.).
+  - “Test Runner for Java” o “Java Test Runner” para ejecutar pruebas JUnit.
 
-![elegimos maven quickstart](/assets/images/ee6942572fd6f1b56dcf32f9e8d715c7.png)
 
-Dentro las versiones, elegimos la última estable (a día de hoy, la 1.4) y damos nombre al ```group-id``` que desarrolla el proyecto, que suele ser la URL de la empresa en notación inversa:
+Tras instalar, reiniciar VS Code; veréis un icono de Testing (probablemente un símbolo de tubo de ensayo) en la barra lateral.
 
-![d7ec695a066df06dd8fe29340ffe7fd5.png](/assets/images/d7ec695a066df06dd8fe29340ffe7fd5.png)
-
-Ahora damos nombre al ```artifact``` a desarrollar, esto es, el nombre del proyecto:
-
-![d70a5d8e63bf1adea9a68f8c8e2d4ab2.png](/assets/images/d70a5d8e63bf1adea9a68f8c8e2d4ab2.png)
-
-Y elegimos la carpeta donde se guardará.
-
-Ahora Visual Studio Code ejecuta una serie de comandos que se descargan las librerías necesarias y nos hace una serie de preguntas para configurar el proyecto.
-Esto se puede ver en la parte inferior del proyecto:
-
-![9edcebd9be45ece22b89436fed3174ef.png](/assets/images/9edcebd9be45ece22b89436fed3174ef.png)
-
-Podemos pulsar Intro para aceptar los valores por defecto.
-
-Estos comando generará una estructura de proyecto con las siguientes carpetas:
-
-```
-|-- pom.xml (Archivo de configuración de Maven)
-|-- src (Código fuente)
-|   |-- main  
-|   |   `-- java
-|   |       `-- com
-|   |           `-- mycompany
-|   |               `-- app
-|   |                   `-- App.java 
-|   `-- test (Pruebas unitarias)
-|       `-- java
-|           `-- com
-|               `-- mycompany
-|                   `-- app
-|                       `-- AppTest.java
-`-- target (Carpeta de clases compiladas)
-```
-
-### 2.1. Archivo `pom.xml`
-
-El archivo `pom.xml` es el núcleo de un proyecto Maven. Contiene información como:
-
-- Nombre y versión del proyecto.
-- Dependencias necesarias.
-- Configuración de compilación y empaquetado.
-
-Ejemplo de `pom.xml` básico:
-
-```xml
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.ejemplo</groupId>
-    <artifactId>mi-proyecto</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-</project>
-```
-
-Dentro de las etiquetas de ```<project>```, debemos  insertar las dependencias necesarias. Para nuestros test serán las siguientes:
-
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.11.4</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.11.4</version>
-        <scope>test</scope>
-    </dependency>
-	<dependency>
-	    <groupId>org.junit.jupiter</groupId>
-	    <artifactId>junit-jupiter-params</artifactId>
-	    <version>5.11.4</version>
-	</dependency>
-	
-</dependencies>
-```
-
-Hemos optado por crear un proyecto **Maven** para que el proceso instalar las dependencias necesarias para realizar los test sea  independiente del IDE y el sistema operativo que usemos.
-
-Para conocer mas sobre los proyectos Maven también podemos visitar la página web de Apache, el creador oficial de la herramienta:
-
-https://maven.apache.org/guides/getting-started/
-
-### 2.2. DEPENDENCIAS
-
-Aparte de las librerías para realizar los test, Maven permite instalar multitud de librerías a través de las dependencias. Podemos encontrar las dependencias necesarias en los dos repositorios más famosos:
-
-- [REPOSOTORIO SONATYPE](https://central.sonatype.com/search?namespace=org.junit.jupiter). Es el repositorio recomendado por el desarrollador oficial, con las últimas actualizaciones del plugin.
-
-- [REPOSOTORIO MAVEN](https://mvnrepository.com/). Es el repositorio de Maven creado por un desarrollador particular con una gran cantidad de plugins.
 
 ## 3. JUNIT
 
-JUnit es una librería para realizar pruebas unitarias automatizadas. Está integrada en Eclipse y Visual Studio Code, por lo que no es necesario descargarse ningún paquete para poder usarla.
+JUnit es una librería oframework creado para realizar pruebas unitarias automatizadas. Está integrada en Eclipse y Visual Studio Code, por lo que no es necesario descargarse ningún paquete para poder usarla.
 
 Hay problemas con su integración en Netbeans, pero hay soluciones no oficiales por internet.
  
@@ -185,7 +89,10 @@ Para encontrar más información sobre las novedades de JUNIT 5, lo mejor es vis
 
 ### 3.1. MÉTODOS DE JUNIT PARA EJECUTAR TEST
 
-Algunos de los métodos que nos sirven para probar nuestras aplicaciones son los siguientes:
+Para realizar pruebas, debemos crear Una clase de prueba , que no es nim más ni menos que una clase Java normal anotada con `@Test` en sus métodos.
+
+
+Para efectuar los test, usaremos las **aserciones** para comparar el resultado esperado con el resultado real. Algunas de las aserciones que nos sirven para probar nuestras aplicaciones son las siguientes:
 
 - ```assertEquals(String mensaje, valorEsperado, valorReal)```: Comprueba que el valorEsperado sea igual al valorReal. Si no son iguales y se incluye el String, entonces se lanzará el mensaje. ValorEsperado y valorReal pueden ser de diferentes tipos.
 
@@ -227,19 +134,6 @@ Existe otras anotaciones que permiten ejecutar código y afectan a la clase en s
 
 Solamente puede haber un método en la clase de prueba con estas dos anotaciones. 
 
-### 3.3. CARACTERÍSTICAS DE LOS TEST
-
-Para probar nuestra aplicación, debemos crear tantos test como métodos tenga la clase a probar, con las siguientes características:
-
-- Los métodos son públicos, no devuelven nada y no reciben ningún argumento.
-- El nombre de cada método es recomendable que se llame de la misma manera que el original o bien que vaya precedido de la palabra test (ej: testSuma(), testResta(), testMultiplica(), testDivide()) . 
-- Encima de cada uno de los métodos aparece la anotación ```@Test``` que indica al compilador que es un método de prueba.
-- Para los test parametrizados, incluiremos las anotaciones pertinentes.
-
-Dentro de cada método de test, debemos seguir siempre el mismo procedimiento:
-- Creamos una instancia de la clase con los valores que nos interese.
-- Invocamos al método que queremos testar. 
-- Comprobamos que el valor obtenido coincide con el valor deseado. Para ello hacemos uso de los métodos que nos ofrece la Librería JUnit, vistos en el apartado anterior.
 
 ## 4. CREANDO NUESTRO PRIMER TEST
 
@@ -450,5 +344,129 @@ public class CalculadoraTest {
 ```
 
 Al ejecutar el test, vemos que todas las pruebas pasan correctamente.
+
+
+## 5. TEST UNITARIOS EN PROYECTOS MAVEN
+
+Maven es una herramienta de gestión y construcción de proyectos para Java. Su propósito principal es facilitar la gestión de dependencias, la compilación, la ejecución de pruebas y la creación de paquetes de manera eficiente y estandarizada.
+
+### 5.1 Características principales
+
+- **Gestión de dependencias**: Permite incluir fácilmente bibliotecas externas sin necesidad de descargarlas manualmente.
+- **Estructura estandarizada de proyectos**: Define una organización común para los proyectos Java.
+- **Automatización de procesos**: Facilita la compilación, pruebas y empaquetado de aplicaciones.
+- **Repositorio central**: Almacena las bibliotecas y plugins utilizados en el proyecto.
+- **Uso de archivos POM (Project Object Model)**: Define la configuración del proyecto en un archivo XML.
+
+### 5.2. Estructura de un proyecto Maven
+
+Maven organiza los proyectos de una manera particular. Para generar un proyecto Maven debemos ejecutar en la paleta de comandos
+
+`Maven: New Project`
+
+Y elegir "maven-archetype-quickstart":
+
+![elegimos maven quickstart](/assets/images/ee6942572fd6f1b56dcf32f9e8d715c7.png)
+
+Dentro las versiones, elegimos la última estable (a día de hoy, la 1.4) y damos nombre al ```group-id``` que desarrolla el proyecto, que suele ser la URL de la empresa en notación inversa:
+
+![d7ec695a066df06dd8fe29340ffe7fd5.png](/assets/images/d7ec695a066df06dd8fe29340ffe7fd5.png)
+
+Ahora damos nombre al ```artifact``` a desarrollar, esto es, el nombre del proyecto:
+
+![d70a5d8e63bf1adea9a68f8c8e2d4ab2.png](/assets/images/d70a5d8e63bf1adea9a68f8c8e2d4ab2.png)
+
+Y elegimos la carpeta donde se guardará.
+
+Ahora Visual Studio Code ejecuta una serie de comandos que se descargan las librerías necesarias y nos hace una serie de preguntas para configurar el proyecto.
+Esto se puede ver en la parte inferior del proyecto:
+
+![9edcebd9be45ece22b89436fed3174ef.png](/assets/images/9edcebd9be45ece22b89436fed3174ef.png)
+
+Podemos pulsar Intro para aceptar los valores por defecto.
+
+Estos comando generará una estructura de proyecto con las siguientes carpetas:
+
+```
+|-- pom.xml (Archivo de configuración de Maven)
+|-- src (Código fuente)
+|   |-- main  
+|   |   `-- java
+|   |       `-- com
+|   |           `-- mycompany
+|   |               `-- app
+|   |                   `-- App.java 
+|   `-- test (Pruebas unitarias)
+|       `-- java
+|           `-- com
+|               `-- mycompany
+|                   `-- app
+|                       `-- AppTest.java
+`-- target (Carpeta de clases compiladas)
+```
+
+### 5.3 Archivo `pom.xml`
+
+El archivo `pom.xml` es el núcleo de un proyecto Maven. Contiene información como:
+
+- Nombre y versión del proyecto.
+- Dependencias necesarias.
+- Configuración de compilación y empaquetado.
+
+Ejemplo de `pom.xml` básico:
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ejemplo</groupId>
+    <artifactId>mi-proyecto</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+</project>
+```
+
+Dentro de las etiquetas de ```<project>```, debemos  insertar las dependencias necesarias. Para nuestros test serán las siguientes:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.11.4</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.11.4</version>
+        <scope>test</scope>
+    </dependency>
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-params</artifactId>
+	    <version>5.11.4</version>
+	</dependency>
+	
+</dependencies>
+```
+
+Hemos optado por crear un proyecto **Maven** para que el proceso instalar las dependencias necesarias para realizar los test sea  independiente del IDE y el sistema operativo que usemos.
+
+Para conocer mas sobre los proyectos Maven también podemos visitar la página web de Apache, el creador oficial de la herramienta:
+
+https://maven.apache.org/guides/getting-started/
+
+### 5.4 DEPENDENCIAS
+
+Aparte de las librerías para realizar los test, Maven permite instalar multitud de librerías a través de las dependencias. Podemos encontrar las dependencias necesarias en los dos repositorios más famosos:
+
+- [REPOSOTORIO SONATYPE](https://central.sonatype.com/search?namespace=org.junit.jupiter). Es el repositorio recomendado por el desarrollador oficial, con las últimas actualizaciones del plugin.
+
+- [REPOSOTORIO MAVEN](https://mvnrepository.com/). Es el repositorio de Maven creado por un desarrollador particular con una gran cantidad de plugins.
+
 
 
