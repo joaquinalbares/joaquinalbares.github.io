@@ -188,11 +188,11 @@ Para crear el test, basta con hacer clic derecho sobre nuestra clase y seleccion
 
 Nos aparecerá una ventana con las opciones para generar el test. En la parte superior, debemos elegir el marco de pruebas que queremos usar, en nuestro caso `JUNIT Jupiter 5`.
 
-![intellij_04.png](/assets/images/UT03_intellij_04.png)
-
 Una ventana nos avisa que hay que instalar la librería correspondiente, lo que podemos hacer pulsando en "Fix".
 
-Una vez pulsamos en "Generate", se nos genera un nuevo archivo que se ubicará en la carpeta "test" de nuestro proyecto y que tendrá una estructura similar a una clase Java ordinaria, pero con anotaciones como las que hemos visto antes, y tantos métdos como métodos tiene la clase a probar.
+![intellij_04.png](/assets/images/UT03_intellij_04.png)
+
+Una vez pulsamos en "OK", se nos genera un nuevo archivo que se ubicará en la carpeta "test" de nuestro proyecto y que tendrá una estructura similar a una clase Java ordinaria, pero con anotaciones como las que hemos visto antes, y tantos métdos como métodos tiene la clase a probar.
 
 Como muestra vamos a comenzar creando el test para el método ```suma()```. Debemos crear un objeto de la clase Calculadora y luego llamar al método ```suma()```. Luego comprobamos que el valor devuelto coincide con el valor esperado.  Se ha incluido la anotación `DisplayName` que muestra el mensaje del método al realizar el test. Para poder incluir esa anotación, debemos importar la librería ```DisplayName```.
 
