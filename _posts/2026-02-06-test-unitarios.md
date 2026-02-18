@@ -64,17 +64,6 @@ Dentro de cada método de test, debemos seguir siempre el mismo procedimiento:
 - Comprobamos que el valor obtenido coincide con el valor deseado. Para ello hacemos uso de los métodos que nos ofrece la Librería JUnit, vistos en el apartado anterior.
 
 
-### 2.3. Preparar Visual Studio Code para Java y JUnit
-
-Para trabajar con Java y pruebas unitarias en VS Code, es necesario instalar algunas extensiones en VS. Las recomendaddas son:
-
-  - “Extension Pack for Java” (incluye soporte de lenguaje, depuración, etc.).
-  - “Test Runner for Java” o “Java Test Runner” para ejecutar pruebas JUnit.
-
-
-Tras instalar, reiniciar VS Code; veréis un icono de Testing (probablemente un símbolo de tubo de ensayo) en la barra lateral.
-
-
 ## 3. JUNIT
 
 JUnit es una librería oframework creado para realizar pruebas unitarias automatizadas. Está integrada en Eclipse y Visual Studio Code, por lo que no es necesario descargarse ningún paquete para poder usarla.
@@ -90,7 +79,6 @@ Para encontrar más información sobre las novedades de JUNIT 5, lo mejor es vis
 ### 3.1. MÉTODOS DE JUNIT PARA EJECUTAR TEST
 
 Para realizar pruebas, debemos crear Una clase de prueba , que no es nim más ni menos que una clase Java normal anotada con `@Test` en sus métodos.
-
 
 Para efectuar los test, usaremos las **aserciones** para comparar el resultado esperado con el resultado real. Algunas de las aserciones que nos sirven para probar nuestras aplicaciones son las siguientes:
 
@@ -139,14 +127,21 @@ Solamente puede haber un método en la clase de prueba con estas dos anotaciones
 
 ### 4.1. CREACIÓN DE LA CLASE A TESTEAR
 
-Para comenzar nuestro ejemplo, en primer lugar debemos crear nuestra clase sobre la que vamos a realizar los test.
+En primer lugar, vamos a crear nuestro proyecto Java. Para ello, en la pantalla de bienvenida de IntelliJ, seleccionamos "New Project" y luego "Java". Como "Build System" elegimos "IntelliJ" y pulsamos "Create".
+
+![intellij1.png](/assets/images/UT03_intellij_01.png)
+
+En segundo lugar, debemos crear la carpeta donde guardaremos los test. Para ello, hacemos clic derecho sobre el proyecto y seleccionamos "New -> Directory". Le damos el nombre "test" a la carpeta y pulsamos "OK".
+
+![intellij2.png](/assets/images/UT03_intellij_02.png)
+
+Luego pulsamos con el botón derecho sobre la carpeta "test" y seleccionamos "Mark Directory as -> Test Sources Root". Esto indicará a IntelliJ que los archivos que se guarden en esta carpeta serán test.
 
 Para este ejemplo básico, hemos creado esta clase calculadora que incluye cuatro métodos y el constructor, que recibe dos números como entrada.  
 
 La clase calculadora queda así:
 
 ```java
-package es.ieslosalbares.pruebas;
 
 public class Calculadora {
 
@@ -186,62 +181,18 @@ public class Calculadora {
 ```
 
 ### 4.2. CREANDO EL TEST
-Ahora vamos a crear una clase de prueba para verificar nuestra calculadora. En genera podremos crear la plantilla del test desde el menú de nuestro IDE o bien hacerlo desde cero.
 
-En primer lugar, debemos habilitar los test para nuestro proyecto. Desde VSCode podemos pinchar en la parte izquierda, el icono de los test 
+Para crear el test, basta con hacer clic derecho sobre nuestra clase y seleccionar "Generate -> Test".
 
-![ut03_test.png](/assets/images/ut03_test.png)
+![intellij03.png](/assets/images/UT03_intellij_03.png)
 
-Y luego en la parte superior derecha, el icono de "Enable Java Test":
+Nos aparecerá una ventana con las opciones para generar el test. En la parte superior, debemos elegir el marco de pruebas que queremos usar, en nuestro caso `JUNIT Jupiter 5`.
 
-![ut03_enable java.png](/assets/images/ut03_enable java.png)
+![intellij_04.png](/assets/images/UT03_intellij_04.png)
 
-Debemos elegir la opción `JUNIT Jupiter` Lo que nos descarga la librería de JUnit y nos crea la carpeta "test" dentro de nuestro proyecto, donde se guardarán los test que creemos.
+Una ventana nos avisa que hay que instalar la librería correspondiente, lo que podemos hacer pulsando en "Fix".
 
-Una vez que hemos habilitado la creación de tests, podemos crear la clase de test para nuestra clase Calculadora. Para ello, podemos usar el menú de nuestro IDE o bien crear la clase de test desde cero.
-Si optamos por crearlos de manera automatizada, para el caso de VSCode, hacemos clic con el encima de la clase a probar y seleccionamos "Source Actions -> Generate Test":
-
-![95df7702484d259ec464ec1f013cd476.png](/assets/images/95df7702484d259ec464ec1f013cd476.png)
-
-Por defecto nos sale el archivo sobre el que estamos trabajando, pero podemos escribir otro diferente.
-
-En la parte izquierda elegimos los tipos de métodos sobre los que queremos generar los test y pulsamos  "OK"  
-
-![c016f9fed0bd01ee119d204a794218c8.png](/assets/images/c016f9fed0bd01ee119d204a794218c8.png)
-
-Lo que nos genera un nuevo archivo que se ubicará en la carpeta "test" de nuestro proyecto y que tendrá la siguiente estructura:
-
-```java
-package es.ieslosalbares.pruebas;
-
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
-public class CalculadoraTest {
-    
-    public CalculadoraTest() {
-    }
-
-    @Test
-    public void testSuma() {
-    }
-
-    @Test
-    public void testResta() {
-    }
-
-    @Test
-    public void testMultiplica() {
-    }
-
-    @Test
-    public void testDivide() {
-    }
-    
-}
-```
- 
- Vemos una estructura similar a una clase Java ordinaria.
+Una vez pulsamos en "Generate", se nos genera un nuevo archivo que se ubicará en la carpeta "test" de nuestro proyecto y que tendrá una estructura similar a una clase Java ordinaria, pero con anotaciones como las que hemos visto antes, y tantos métdos como métodos tiene la clase a probar.
 
 Como muestra vamos a comenzar creando el test para el método ```suma()```. Debemos crear un objeto de la clase Calculadora y luego llamar al método ```suma()```. Luego comprobamos que el valor devuelto coincide con el valor esperado.  Se ha incluido la anotación `DisplayName` que muestra el mensaje del método al realizar el test. Para poder incluir esa anotación, debemos importar la librería ```DisplayName```.
 
@@ -260,13 +211,13 @@ void sumarDosNumeros() {
 
 El procedimiento sería similar para el resto.
 
-Para pasar el test, hacemos clic encima del triángulo derecho que está a la izquierda test que queremos ejecutar:
+Para pasar el test, ejecutamos la clse :
 
-![7775bed4acf6bc5d428963e9e0a87422.png](/assets/images/7775bed4acf6bc5d428963e9e0a87422.png)
+![intellij_05.png](/assets/images/UT03_intellij_05.png)
 
-y en la ventana de resultados podemos ver que el test se pasa satisfactoriamente si aparece el círculo verde a la izquierda del test.
+Y comprobamos que los test pasan correctamente:
 
-Ahora podemos crear una batería de pruebas para probar otro método de esta clase. Para ello vamos usar la anotación @ParameterizedTest para indicar que es un test con parámetros. Al usar este tipo de test, debemos incluir una segunda anotación para indicar de dónde vamos a obtener los valores que vamos a pasar al método. Existen muchas formas de generar valores, y dependerá del método a probar su elección. Aqui hemos optado por una serie de valores CSV (Valores Separados por Coma), que es la mas sencilla de manejar.
+Ahora podemos crear una batería de pruebas para probar todos los métodos de esta clase con un conjunto de valores que tomaremos de los test de caja blanca. Para ello vamos usar la anotación @ParameterizedTest para indicar que es un test con parámetros. Al usar este tipo de test, debemos incluir una segunda anotación para indicar de dónde vamos a obtener los valores que vamos a pasar al método. Existen muchas formas de generar valores, y dependerá del método a probar su elección. Aqui hemos optado por una serie de valores CSV (Valores Separados por Coma), que es la mas sencilla de manejar.
 
 El código quedaría así:
 
@@ -302,7 +253,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class CalculadoraTest {
-
 
     @Test
     @DisplayName("1 + 1 = 2")
