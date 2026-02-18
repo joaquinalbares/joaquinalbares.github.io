@@ -238,8 +238,8 @@ void resta(int num1, int num2, int resultadoEsperado) {
 
 Podéis ver un interesante tutorial sobre test parametrizados en los siguientes enlaces:
 
-- [](https://blog.codefx.org/libraries/junit-5-parameterized-tests/)
-- [](https://www.geeksforgeeks.org/junit-5-how-to-write-parameterized-tests/)
+- [https://blog.codefx.org/libraries/junit-5-parameterized-tests/](https://blog.codefx.org/libraries/junit-5-parameterized-tests/)
+- [https://www.geeksforgeeks.org/junit-5-how-to-write-parameterized-tests/](https://www.geeksforgeeks.org/junit-5-how-to-write-parameterized-tests/)
 
 Si completamos los demás métodos, el test final quedaría así:
 
