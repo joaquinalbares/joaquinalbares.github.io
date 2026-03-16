@@ -56,12 +56,36 @@ En el proceso de refactorización, se siguen una serie de patrones preestablecid
   void prnt(String s) { ... }
   ```
 
-- **Sustituir bloques de código por un método**: este patrón nos aconseja sustituir un bloque de código, por un método. De esta forma, cada vez que queramos acceder a ese bloque de código, bastaría con invocar al método.
-- **Campos encapsulados**: se aconseja crear métodos getter y setter, (de asignación y de consulta) para cada campo que se defina en una clase. Cuando sea necesario acceder o modificar el valor de un campo, basta con invocar al método getter o setter según convenga.
-- **Organizar las clases por paquetes (packages)**: si es necesario, se puede mover una clase de un paquete a otro, o de un proyecto a otro. La idea es no duplicar código que ya se haya generado. Esto impone la actualización en todo el código fuente de las referencias a la clase en su nueva localización.
-- **Cambiar los parámetros del proyecto**: nos permite añadir nuevos parámetros a un método y cambiar los modificadores de acceso.
+- **Sustituir bloques de código por un método**: este patrón nos aconseja sustituir un bloque de código, por un método. De esta forma, cada vez que queramos acceder a ese bloque de código, bastaría con invocar al método.El siguiente ejmeplo extrae un bloque de código a un método reutilizable.
 
-A continuación, se describen los más comunes con ejemplos prácticos:
+  **Antes:**
+  ```java
+  public void printInvoice(Order order) {
+      System.out.println("Invoice for: " + order.getCustomer());
+      double total = 0;
+      for (Item item : order.getItems()) {
+          total += item.getPrice() * item.getQuantity();
+      }
+      System.out.println("Total: " + total);
+  }
+  ```
+
+  **Después:**
+  ```java
+  public void printInvoice(Order order) {
+      System.out.println("Invoice for: " + order.getCustomer());
+      double total = calculateTotal(order);
+      System.out.println("Total: " + total);
+  }
+
+  private double calculateTotal(Order order) {
+      double total = 0;
+      for (Item item : order.getItems()) {
+          total += item.getPrice() * item.getQuantity();
+      }
+      return total;
+  }
+  ```
 
 - **Código duplicado (Duplicated code)**: Código repetido en varios lugares es un signo de mala práctica. Unificarlo reduce errores y mejora la mantenibilidad.
 
@@ -98,6 +122,51 @@ A continuación, se describen los más comunes con ejemplos prácticos:
   ```
 
   Aquí, el código duplicado se extrajo a un método reutilizable `displayUserDetails`.
+
+- **Campos encapsulados**: se aconseja crear métodos getter y setter, (de asignación y de consulta) para cada campo que se defina en una clase. Cuando sea necesario acceder o modificar el valor de un campo, basta con invocar al método getter o setter según convenga.
+
+**Ejemplo antes:**
+```java
+public class User {
+    public String name;
+}
+```
+
+**Ejemplo después:**
+```java
+public class User {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+- **Organizar las clases por paquetes (packages)**: si es necesario, se puede mover una clase de un paquete a otro, o de un proyecto a otro. La idea es no duplicar código que ya se haya generado. Esto impone la actualización en todo el código fuente de las referencias a la clase en su nueva localización.
+
+
+**Ejemplo antes:**
+```java
+// Todas las clases en el paquete raíz
+public class Order { ... }
+public class OrderCalculator { ... }
+```
+
+**Ejemplo después:**
+```java
+// Paquete: com.example.order
+package com.example.order;
+public class Order { ... }
+
+// Paquete: com.example.calculator
+package com.example.calculator;
+public class OrderCalculator { ... }
+```
 
 - **Métodos muy largos (Long method)**: Un método extenso es difícil de entender y suele realizar múltiples tareas. Dividirlo en métodos más pequeños mejora la claridad y reutilización.
 
@@ -221,3 +290,112 @@ A continuación, se describen los más comunes con ejemplos prácticos:
   ```
 
   Los parámetros se agrupan en una clase `UserData`, reduciendo la complejidad.
+
+### Ejemplo completo de refactorización
+
+A continuación, un ejemplo que combina varios problemas y cómo refactorizarlos:
+
+**Código original (con problemas):**
+```java
+public class OrderProcessor {
+    public void process(String customer, String[] items, double[] prices, int[] quantities) {
+        // Imprimir detalles
+        System.out.println("Customer: " + customer);
+        for (int i = 0; i < items.length; i++) {
+            System.out.println(items[i] + ": " + prices[i] * quantities[i]);
+        }
+        // Calcular total
+        double total = 0;
+        for (int i = 0; i < items.length; i++) {
+            total += prices[i] * quantities[i];
+        }
+        // Aplicar descuento
+        if (total > 100) {
+            total = total * 0.9;
+        }
+        System.out.println("Total: " + total);
+    }
+}
+```
+
+**Problemas detectados:**
+1. Lista de parámetros extensa (`customer`, `items`, `prices`, `quantities`).
+2. Código duplicado (cálculo de total y lógica de impresión).
+3. Método largo con múltiples responsabilidades.
+4. Nombres poco descriptivos.
+
+**Código refactorizado:**
+```java
+public class Order {
+    private String customer;
+    private List<Item> items;
+
+    public Order(String customer, List<Item> items) {
+        this.customer = customer;
+        this.items = items;
+    }
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+}
+
+public class Item {
+    private String name;
+    private double price;
+    private int quantity;
+
+    public Item(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public double getSubtotal() {
+        return price * quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class OrderProcessor {
+    public void process(Order order) {
+        printOrderDetails(order);
+        double total = calculateTotal(order);
+        total = applyDiscount(total);
+        System.out.println("Total: " + total);
+    }
+
+    private void printOrderDetails(Order order) {
+        System.out.println("Customer: " + order.getCustomer());
+        for (Item item : order.getItems()) {
+            System.out.println(item.getName() + ": " + item.getSubtotal());
+        }
+    }
+
+    private double calculateTotal(Order order) {
+        double total = 0;
+        for (Item item : order.getItems()) {
+            total += item.getSubtotal();
+        }
+        return total;
+    }
+
+    private double applyDiscount(double total) {
+        return total > 100 ? total * 0.9 : total;
+    }
+}
+```
+
+**Mejoras aplicadas:**
+1. **Lista de parámetros extensa**: Se creó una clase `Order` y `Item` para agrupar datos relacionados.
+2. **Código duplicado**: El cálculo de subtotales se delegó a la clase `Item`.
+3. **Método largo**: Se dividió `process` en métodos más pequeños (`printOrderDetails`, `calculateTotal`, `applyDiscount`).
+4. **Encapsulación**: Los campos están protegidos con getters.
+5. **Nombres descriptivos**: Los nombres de clases, métodos y variables son más claros.
