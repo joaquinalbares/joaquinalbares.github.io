@@ -53,56 +53,52 @@ Un ejemplo de documentación podría ser el siguiente:
 
 ```java
 /**
-* <h2>Clase Empleado, se utiliza para crear y leer empleados de una BD</h2>
-* Busca información de javadoc en < a href="http://google.com">GOOGLE</a> 
-* @see <a href="http://www.google.com">Google</a>
-* @version 1-2014
-* @author ARM
-* @since 1-1-2014 */
-public class Empleado {
-  /** Atributo Nombre del empleado */
-  private String nombre; 
-  /** Atributo apellido del empleado */
-  private String apellido; 
-  /** Edad del empleado */
-  private double salario;
-  
-  /**
-  * Constructor con 3 parámetros.
-  * Crea objetos empleado, con nombre, apellido y salario.
-  * @param nombre Nombre d e l empleado
-  * @param apellido Apellido del empleado
-  * @param salario Salario del empleado */
-  public Empleado(String nombre, String apellido, double salario).{ 
-    this.nombre=nombre;
-    this.apellido=apellido;
-    this.salario=salario;
-  }
-  
-  //Métodos públicos
-  /**
-  * Sube el salario al empleado. * @see Empleado
-  * @param subida
-  *
-  */
-  public void subidasalario (double subida) { 
-    salario=salario + subida;
-  }
+ * Clase Calculadora para operaciones matemáticas básicas.
+ * 
+ * Esta clase proporciona métodos para sumar, restar y multiplicar números enteros.
+ * 
+ * @author Desarrollador
+ * @version 1.0
+ * @since 2026-04-13
+ */
+public class Calculadora {
 
-  //Métodos privados 
-  /**
-  * Comprueba que e l nombre no este vacío 
-  * @return <ul>
-  *   <li>true: el nombre es una cadena vacía</li>
-  *   <li>false: el nombre no es una cadena vacía</li>
-  * <ul>
-  */
-  private boolean comprobar(){ 
-    if(nombre.equals("")) {
-	  return false;
-	 }
-	 return true;
-  }
+    /**
+     * Suma dos números enteros.
+     * 
+     * @param a Primer número a sumar.
+     * @param b Segundo número a sumar.
+     * @return La suma de a y b.
+     */
+    public int sumar(int a, int b) {
+        return a + b;
+    }
+
+    /**
+     * Resta dos números enteros.
+     * 
+     * @param a Minuendo (número inicial).
+     * @param b Sustraendo (número a restar).
+     * @return La diferencia entre a y b.
+     */
+    public int restar(int a, int b) {
+        return a - b;
+    }
+
+    /**
+     * Multiplica dos números enteros.
+     * 
+     * @param a Primer factor.
+     * @param b Segundo factor.
+     * @return El producto de a y b.
+     * @throws ArithmeticException si algún parámetro es cero (ejemplo de manejo de excepciones).
+     */
+    public int multiplicar(int a, int b) {
+        if (a == 0 || b == 0) {
+            throw new ArithmeticException("Multiplicación por cero no permitida");
+        }
+        return a * b;
+    }
 }
 ```
 
