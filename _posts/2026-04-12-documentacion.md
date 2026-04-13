@@ -9,4 +9,4 @@ tags:
 
 ## 1. DOCUMENTACIÓN
 
-[Documentación](assets/EjercicioClase.zip)
+[Documentación](/assets/EjercicioClase.zip)
