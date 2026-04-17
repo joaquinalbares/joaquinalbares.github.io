@@ -11,3 +11,4 @@ tags:
 
 - [EJERCICIO 01](/assets/docs/examen_1_resuelto.pdf)
 - [EJERCICIO 02](/assets/docs/examen_2_resuelto.pdf)
+- [EJERCICIO 03](/assets/docs/examen_3_resuelto.pdf)
