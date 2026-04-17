@@ -9,6 +9,6 @@ tags:
 
 ## 1.1 EJERCICIOS PARA EXAMEN
 
-Realiza los ejercicio del 5 al 10 de refactorización del siguiente enlaces
+Realiza los ejercicio del 5 al 10 de refactorización del siguiente enlace:
 
 [EJERCICIO](https://github.com/JavierHerreroPorras/Retos-ED-DAW)
