@@ -64,12 +64,6 @@ Una empresa gestiona empleados, directivos y clientes. Tanto empleados como clie
 - Representar la relación entre directivo y subordinados.
 - Añadir un diagrama de objetos con un directivo y dos empleados.
 
-### Criterios de evaluación
-
-- Organiza correctamente la generalización y especialización.
-- Evita duplicidad innecesaria de atributos.
-- Modela bien la jerarquía interna de la empresa.
-- Presenta un diagrama legible y consistente.
 
 ## Ejercicio 4. Videoclub
 
@@ -84,13 +78,6 @@ Un videoclub gestiona películas, socios y alquileres. Cada película tiene tít
 - Definir métodos principales del proceso.
 - Crear un diagrama de objetos con un alquiler activo.
 
-### Criterios de evaluación
-
-- Introduce correctamente la clase asociativa o intermedia.
-- Distingue entre película, socio y alquiler.
-- Añade operaciones funcionales y realistas.
-- Refleja adecuadamente las cardinalidades.
-
 ## Ejercicio 5. Instituto
 
 ### Enunciado
@@ -103,13 +90,6 @@ Un instituto gestiona profesores, alumnos, módulos y grupos. Cada alumno perten
 - Incorporar las asociaciones con multiplicidades.
 - Justificar si existen clases abstractas o no.
 - Crear un ejemplo de diagrama de objetos con un grupo y tres alumnos.
-
-### Criterios de evaluación
-
-- Identifica adecuadamente las entidades educativas.
-- Representa bien la relación entre grupo, alumno y módulo.
-- Usa cardinalidades correctas.
-- Justifica con sentido las decisiones de diseño.
 
 ## Ejercicio 6. Tienda online
 
@@ -124,13 +104,6 @@ Una tienda online vende productos organizados por categorías. Los clientes pued
 - Añadir métodos para calcular total del pedido.
 - Crear un diagrama de objetos con un pedido de tres líneas.
 
-### Criterios de evaluación
-
-- Distingue con claridad las clases del dominio.
-- Aplica correctamente la composición.
-- Define atributos útiles para la gestión del pedido.
-- Mantiene coherencia entre clases y relaciones.
-
 ## Ejercicio 7. Hospital
 
 ### Enunciado
@@ -143,13 +116,6 @@ Un hospital administra pacientes, médicos, citas y tratamientos. Un paciente pu
 - Representar las asociaciones entre paciente, médico, cita y tratamiento.
 - Añadir métodos para programar y cancelar citas.
 - Crear un diagrama de objetos con un paciente y dos citas.
-
-### Criterios de evaluación
-
-- Modela de forma coherente el ámbito sanitario.
-- Relaciona correctamente las clases principales.
-- Propone métodos funcionales y bien nombrados.
-- Utiliza UML de manera clara y ordenada.
 
 ## Ejercicio 8. Plataforma de cursos
 
@@ -164,13 +130,6 @@ Una plataforma virtual ofrece cursos, módulos, profesores y estudiantes. Un cur
 - Proponer métodos de inscripción y evaluación.
 - Crear un diagrama de objetos con un estudiante inscrito en dos cursos.
 
-### Criterios de evaluación
-
-- Identifica correctamente la estructura de la plataforma.
-- Modela de manera coherente cursos, módulos y estudiantes.
-- Diferencia bien entre contención y asociación.
-- Presenta un diagrama completo y limpio.
-
 ## Ejercicio 9. Parking inteligente
 
 ### Enunciado
@@ -183,13 +142,6 @@ Un parking inteligente dispone de plazas, vehículos, tickets y tarifas. Cuando 
 - Representar la especialización de plazas.
 - Añadir métodos para registrar entrada, salida y cálculo de importe.
 - Construir un diagrama de objetos con un vehículo estacionado.
-
-### Criterios de evaluación
-
-- Utiliza correctamente la generalización en el modelo.
-- Representa de forma adecuada la ocupación de plazas.
-- Incluye atributos y operaciones relevantes.
-- Mantiene consistencia en el diseño.
 
 ## Ejercicio 10. Biblioteca musical
 
@@ -204,9 +156,13 @@ Una biblioteca musical gestiona discos, canciones, artistas, usuarios y listas d
 - Añadir métodos para crear listas y añadir canciones.
 - Crear un diagrama de objetos con una lista de reproducción concreta.
 
-### Criterios de evaluación
 
-- Distingue correctamente catálogo, artista y usuario.
-- Modela bien la relación entre disco y canción.
-- Representa adecuadamente las listas de reproducción.
-- Usa notación UML con precisión.
+## Ejercicio 11 . Sistema de control de asistencia en un gimnasio
+Un gimnasio quiere llevar el control de asistencia de sus socios. Cada socio tiene un identificador, nombre, apellidos, e-mail y tipo de cuota (mensual, trimestral, anual). El gimnasio ofrece actividades dirigidas (zumba, spinning, yoga, etc.) con nombre, horario y aforo máximo. Los socios se inscriben a actividades específicas y deben confirmar su asistencia en cada sesión. Diseña el diagrama UML correspondiente.
+
+### Tareas
+
+- Elaborar el diagrama de clases.
+- Indicar relaciones, cardinalidades y posibles composiciones.
+- Añadir métodos para crear actividades e inscribirse en actividades.
+- Crear un diagrama de objetos con una socio y una lista actividades concretas.
