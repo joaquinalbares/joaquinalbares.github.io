@@ -75,9 +75,7 @@ Sala "1" -- "0..*" Reserva
 Reserva "0..1" -- "0..1" Grupo
 @enduml
 ```
-El diagrama de clases se puede ver en la figura 
-![Diagrama de clases](assets/img/UT06_EJ01.png)
-
+El diagrama de clases se puede ver en la siguiente figura:
 [Diagrama de clases en PlantUML](https://www.plantuml.com/plantuml/png/ZLB1JiCm3BtlAwAUjj5DSDrfqf3Wm8do0rxYRPRIk7BJNH3_ZjL4QM6Ju9AsptxkUo_Uzn4a3grVM0zzRmuOeh3vN6nCuFOek3DD50fd1Hm9MaiS2lQLMGrRIYHo4-5s0hP0VlOTgUF3m14Azc04UvGhI0CUbhqUMjEpDYUq5tXbKU0P8dvGYxLnWq2IH26kTkOziNMEvN0YQK7UF9x1mJ8FBZtQVMLoamdmy0yF5ZgmvC2DlrJWmW92FBDW1RF-p4wLUg8giywyN5mbcqLD5daZw5uCYlx88IURHqpSaebJjKTcZn3cIIr_H_8YG_VdlMfttfhrPfDCf7sedYgZIFMutQwhSZDZpFTB-Jd2fK7Vaex57eFJJVq6)
 
 **Crear un diagrama de objetos con un socio y una reserva.**
@@ -107,4 +105,5 @@ A1 --> R10 : "ocupadaPor"
 @enduml
 ```
 
+El diagrama de clases se puede ver en la siguiente figura:
 [Diagrama de objetos en PlantUML](https://www.plantuml.com/plantuml/png/LP31QiCm38RlVWhZUuOJQ3SA6yrssM67qSAkHRLLec9RmObxwEYxBqh7kbui_Eb7d-NrC48UImoAzqTqepPRTiIxhQsDXa5FLNyhylfP6s4gSTndb6kRG6yAdOt221G4GO8r7Z7sWHySHwD6wlcjy0ZIZPY60i6eoqq60NRjLTNUJEsTI4Alam6DSj238m-IQXQgumoPM48V9LLVXBf-N5bRDVLq_XTjSC1yWjscjhDigdysOUg0heDtpY2aiSsoiekgiRf-cYVvaYSn9-akxNMntvc2A7awaP-tSvmEb2DuUTS1me3gekGVg-fbzgwqwUZCHhLtZ5tfmSCdPwFMc7o9uGS0)
