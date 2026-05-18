@@ -76,7 +76,7 @@ Reserva "0..1" -- "0..1" Grupo
 @enduml
 ```
 El diagrama de clases se puede ver en la figura 
-![Diagrama de clases](/assets/img/UT06_EJ01.png)
+![Diagrama de clases](assets/img/UT06_EJ01.png)
 
 [Diagrama de clases en PlantUML](https://www.plantuml.com/plantuml/png/ZLB1JiCm3BtlAwAUjj5DSDrfqf3Wm8do0rxYRPRIk7BJNH3_ZjL4QM6Ju9AsptxkUo_Uzn4a3grVM0zzRmuOeh3vN6nCuFOek3DD50fd1Hm9MaiS2lQLMGrRIYHo4-5s0hP0VlOTgUF3m14Azc04UvGhI0CUbhqUMjEpDYUq5tXbKU0P8dvGYxLnWq2IH26kTkOziNMEvN0YQK7UF9x1mJ8FBZtQVMLoamdmy0yF5ZgmvC2DlrJWmW92FBDW1RF-p4wLUg8giywyN5mbcqLD5daZw5uCYlx88IURHqpSaebJjKTcZn3cIIr_H_8YG_VdlMfttfhrPfDCf7sedYgZIFMutQwhSZDZpFTB-Jd2fK7Vaex57eFJJVq6)
 
