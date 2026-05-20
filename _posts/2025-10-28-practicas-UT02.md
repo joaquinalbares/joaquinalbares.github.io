@@ -11,7 +11,7 @@ tags:
 Las prácticas que hemos realizado de la UT02 y que hay que subir a guthub son las siguientes:
 
 - P01 - CREACIÓN DE CUENTA EN GITHUB y CONFIGURACIÓN DE GIT.
-- P02 - INSTALACIÓN DE VSCODE Y CONEXIÓN CON GITHUB.
+- [P02 - INSTALACIÓN DE VSCODE Y CONEXIÓN CON GITHUB](2025-10-15-conectar-github-vscode).
 - P03 - INSTALACIÓN DE DIVERSOS LENGUAJES DE PROGRAMACIÓN.
 
 La estructura de la carpeta será el siguiente:

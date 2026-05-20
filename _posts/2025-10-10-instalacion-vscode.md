@@ -1,5 +1,5 @@
 ---
-title: "PASOS INICIALES: INSTALACIÓN DE VISUAL STUDIO CODE"
+title: "UT02 - P02: INSTALACIÓN DE VISUAL STUDIO CODE"
 date: 2025-10-06T01:34:30-04:00
 categories:
   - UT02
@@ -50,4 +50,3 @@ echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.
   ```  
 
 Una vez instalado Visual Studio Code, lo ejecutamos una primera vez para terminar de configurar algunos aspectos (tema, idioma, ...) y pasamos a instalar el [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) desde el [marketplace](https://marketplace.visualstudio.com/), el lugar donde podemos encontrar multitud de plugins para Visual Studio Code.
-

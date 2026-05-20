@@ -1,8 +1,8 @@
 ---
-title: "CONECTAR GITHUB CON VS CODE"
+title: "UT02 - P03 : CONECTAR GITHUB CON VS CODE"
 date: 2025-10-15T01:00:00-04:00
 categories:
-  - UT01
+  - UT02
 tags:
   - TRABAJO
 ---

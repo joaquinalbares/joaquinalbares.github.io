@@ -1,8 +1,8 @@
 ---
-title: "PASOS INICIALES: INSTALACIÓN DE JAVA"
-date: 2025-09-26T15:34:30-04:00
+title: "UT02 - P01: INSTALACIÓN DE JAVA"
+date: 2025-10-05T15:34:30-04:00
 categories:
-  - clases
+  - UT02
 tags:
   - java
   - temurin
@@ -70,5 +70,4 @@ sudo su
 8. Comprobamos la instalación.
   ```
   java -version
-  ```    
-
+  ```
