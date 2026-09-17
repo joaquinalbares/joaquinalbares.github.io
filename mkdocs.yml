@@ -1,0 +1,17 @@
+site_name: Entornos de Desarrollo - IES Los Albares
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - navigation.tab
+    - navigation.sections
+    - search.suggest
+    - content.code.copy
+    - search.highlight
+nav:
+  - Inicio: index.md
+  #- UT01 - Introducción al Software: ut01.md
+  #- UT02 - IDEs: ut02.md
+  #- UT03 - Pruebas y Depuración: ut03.md
+  # ... resto de UTs
