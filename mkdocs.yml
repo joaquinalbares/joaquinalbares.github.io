@@ -1,16 +1,28 @@
 site_name: Entornos de Desarrollo - IES Los Albares
 theme:
   name: material
+  language: es
   palette:
     primary: indigo
   features:
     - navigation.tab
     - navigation.sections
-    - search.suggest
+    - search
     - content.code.copy
-    - search.highlight
-nav:
-  - Inicio: index.md
+    - awesome-pages
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - admonition
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+#nav:
+  #- Inicio: index.md
   #- UT01 - Introducción al Software: ut01.md
   #- UT02 - IDEs: ut02.md
   #- UT03 - Pruebas y Depuración: ut03.md
