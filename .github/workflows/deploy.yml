@@ -1,9 +1,11 @@
 name: deploy-mkdocs
+
 on:
   push:
     branches:
-      - main # o master, según el nombre de tu rama principal
+      - main # Cambia a 'master' si tu rama principal se llama así
 
+# Permisos requeridos para que el workflow pueda escribir en la rama gh-pages
 permissions:
   contents: write
 
@@ -11,16 +13,35 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # 1. Obtener el código fuente del repositorio
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      # 2. Configurar el entorno de Python
+      - name: Configurar Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc +'%Y%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
+
+      # 3. Configurar la caché para acelerar las descargas de paquetes
+      - name: Configurar caché de pip
+        uses: actions/cache@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-awesome-pages-plugin pymdown-extensions
-      - run: mkdocs gh-deploy --force
+            ${{ runner.os }}-pip-
+
+      # 4. Instalar MkDocs y todos las dependencias necesarias
+      - name: Instalar dependencias de Python
+        run: |
+          python -m pip install --upgrade pip
+          pip install \
+            mkdocs-material \
+            mkdocs-awesome-pages-plugin \
+            pymdown-extensions
+
+      # 5. Compilar y publicar la web en la rama gh-pages
+      - name: Desplegar en GitHub Pages
+        run: |
+          mkdocs gh-deploy --force

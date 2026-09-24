@@ -1,29 +1,84 @@
-site_name: Entornos de Desarrollo - IES Los Albares
+# ==============================================================================
+# INFORMACIÓN GENERAL DEL SITIO
+# ==============================================================================
+site_name: Joaquín Ríos - IES Los Albares | Docencia y Proyectos
+site_description: Sitio web personal con apuntes, noticias y materiales docentes.
+site_author: Joaquín Rios
+site_url: https://joaquinalbares.github.io/
+repo_url: https://github.com/joaquinalbares/joaquinalbares.github.io
+repo_name: GitHub
+
+# ==============================================================================
+# CONFIGURACIÓN DEL TEMA (Material for MkDocs)
+# ==============================================================================
 theme:
   name: material
   language: es
-  palette:
-    primary: indigo
-  features:
-    - navigation.tab
-    - navigation.sections
-    - search
-    - content.code.copy
-    - awesome-pages
 
+  # Opciones visuales y de interacción
+  features:
+    - navigation.tabs          # Menú principal en pestañas superiores
+    - navigation.sections      # Subsecciones claras en la barra lateral
+    - navigation.top           # Botón "Volver arriba" al hacer scroll
+    - navigation.instant       # Carga ultrarrápida de páginas (Single Page App)
+    - search.suggest           # Sugerencias automáticas en la búsqueda
+    - search.highlight         # Resaltar texto buscado en los resultados
+    - content.code.copy        # Botón para copiar bloques de código
+
+  # Paleta de colores y modo oscuro/claro conmutador
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+# ==============================================================================
+# PLUGINS
+# ==============================================================================
+plugins:
+  - search
+  - awesome-pages             # Navegación automática por carpetas con archivos .pages
+  - blog:                     # Módulo de blog para novedades o publicaciones
+      post_dir: blog/posts
+      archive: true
+      categories: true
+
+# ==============================================================================
+# EXTENSIONES DE MARKDOWN (Matemáticas, Avisos, Código)
+# ==============================================================================
 markdown_extensions:
+  # Cajas de notas / Tips / Admonitions
+  - admonition
+  - pymdownx.details
+
+  # Soporte para matemáticas con Arithmatex
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - admonition
 
+  # Resaltado de sintaxis y código
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+  # Píldoras de formato, tachado y listas mejoradas
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+
+# ==============================================================================
+# JAVASCRIPT EXTRA (Requerido para renderizar MathJax/LaTeX)
+# ==============================================================================
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-#nav:
-  #- Inicio: index.md
-  #- UT01 - Introducción al Software: ut01.md
-  #- UT02 - IDEs: ut02.md
-  #- UT03 - Pruebas y Depuración: ut03.md
-  # ... resto de UTs
